@@ -453,7 +453,7 @@ footer a:hover
     display: grid;
 }
 
-#hero_section h1 i
+#hero_section h1 i:hover
 {
     color: var(--font_color_gold);
 }
@@ -782,7 +782,7 @@ main section:nth-child(3) .latest_properties_container
 {
     font-size: 1.4rem;
     text-align: center;
-    background-color: var(--bg_color_gold);
+    background-color: var(--main_bg_color_transparent_dark);
     width: 80px;
     height: 80px;
     line-height: 80px;
@@ -924,14 +924,14 @@ main section:nth-child(3) .latest_properties_container
 {
     display: grid;
     justify-items: center;
-    background-color: var(--bg_color_gold);
+    background-color: var(--bg_color_gold_transparent_dark);
     padding: 8px 0 24px 0;
     margin: 0 auto;
 }
 
 .property_link_container
 {
-    background-color: var(--bg_color_gold);
+    background-color: var(--bg_color_gold_transparent_dark);
     margin: 0 auto;
     position: relative;
 }
@@ -960,7 +960,7 @@ main section:nth-child(3) .latest_properties_container
 #main_section_6 > div
 {
     height: 560px;
-    box-shadow: var(--material_card_box_shadow);
+    box-shadow: var(--material_card_box_shadow_subtle);
 }
 
 #main_section_6 i, #main_section_6 i::before
@@ -1008,8 +1008,8 @@ main section:nth-child(3) .latest_properties_container
     width: max-content;
     display: block;
     margin: auto;
-    margin-top: 32px;
-    margin-bottom: 32px;
+    margin-top: 48px;
+    margin-bottom: 48px;
     /*border: 1px solid var(--bg_color_white);*/
 }
 
