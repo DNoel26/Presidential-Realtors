@@ -899,6 +899,11 @@ main section:nth-child(3) .latest_properties_container
     font-size: 0.9rem;
 }
 
+.property_agency_container > div:first-child
+{
+    overflow: hidden;
+}
+
 .property_agency_container > div:last-child
 {
     align-self: center;
@@ -912,6 +917,7 @@ main section:nth-child(3) .latest_properties_container
     width: 100%;
     height: 128px;
     margin: auto;
+    transition: 0.4s;
 }
 
 .property_price_container
@@ -949,6 +955,12 @@ main section:nth-child(3) .latest_properties_container
 {
     background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url("/img/move_in.jpg");
     height: 960px;
+}
+
+#main_section_6 > div
+{
+    height: 560px;
+    box-shadow: var(--material_card_box_shadow);
 }
 
 #main_section_6 i, #main_section_6 i::before
