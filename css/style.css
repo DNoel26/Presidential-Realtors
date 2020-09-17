@@ -688,7 +688,7 @@ main section:nth-child(3) .latest_properties_container
     align-self: center;
 }
 
-#main_section_4 .banner_container > div i
+#main_section_4 .banner_container > div .banner_i
 {
     font-size: 1.4rem;
     text-align: center;
@@ -704,13 +704,13 @@ main section:nth-child(3) .latest_properties_container
 
 #main_section_4 .banner_container > div h3
 {
-    font-size: 1.4rem;
-    margin-bottom: 16px;
+    font-size: 1.6rem;
+    margin-bottom: 8px;
 }
 
 #main_section_4 .banner_container > div p
 {
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .banner_container
