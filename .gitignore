@@ -1,0 +1,6 @@
+git_ignore_files/
+.history/
+node_modules/
+config/keys.env
+config/routes_readme.txt
+MySQL/

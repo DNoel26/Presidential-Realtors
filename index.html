@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presidential Realtors & Associates | Home Page</title>
+    <script src="https://kit.fontawesome.com/3ad7481254.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav id="top_nav">
+            <div class="container">
+                <ul id="top_ul_left">
+                    <li><a href="https://api.whatsapp.com/send?phone=+18682841030" target="_blank"><i class="fab fa-whatsapp"></i>+1 (868)-284-1030</a></li>
+                    <li><a href="mailto: info@presidentialrealtors.com"><i class="far fa-envelope"></i>info@presidentialrealtors.com</a></li> 
+                </ul>
+                <ul id="top_ul_right">
+                        <li><a href="https://www.facebook.com/presidential.realtors" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href=""><i class="far fa-user-circle"></i>Register</a></li>
+                        <li><a href=""><i class="fas fa-sign-in-alt"></i>Login</a></li>
+                </ul>         
+            </div>   
+        </nav>
+        <nav id="bottom_nav">
+            <div class="container">
+                <ul id="bottom_ul_left">
+                    <div id="logo"><a href=""><img class="fit_img_height" src="/img/Presidential Realtors Final Logo-02.png" alt="Presidential Realtors Logo"></a></div>
+                    <!--<div id="tagline"><h2 ></h2></div>-->
+                </ul>
+                <ul id="bottom_ul_right">
+                    <li><a id="active_link" href="">Home</a></li>
+                    <li><a href="">About Us<i class="fas fa-sort-down"></i></a></li>
+                    <div id="about_us_dropdown" class="dropdown_div">       
+                        <li><a href="">Services Offered</a></li>
+                        <li><a href="">Board of Directors</a></li>
+                        <li><a href="">Real Estate Agents</a></li>     
+                    </div>
+                    <li><a href="">Listings</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>     
+            </div>    
+        </nav>
+    </header>
+    <main>
+        <section id="hero_section"> <!--MAIN SECTION 1 - HERO-->
+            <div class="container">
+                <h2>The <i class="fas fa-key"></i> to Your Dreams Becoming a Reality</h2>
+                <p>Find what you need. Our agents are here to help!</p>
+                <a href=""><i class="fas fa-house-user"></i> View Properties</a>
+            </div>
+        </section>
+        <section id="main_section_2" class="container"> <!--MAIN SECTION 2 - SEARCH FOR PROPERTIES-->
+            <form class="form_container" action="">
+                <div>
+                    <div id="search_section">
+                        <div>
+                            <select class="form_control" name="payments" id="payments">
+                                <option value="0">Buy</option>
+                                <option value="1">Rent</option>
+                            </select>
+                        </div>
+                        <div>
+                            <!--<label for="search"></label>-->
+                            <input class="form_control" type="search" name="search" id="search" placeholder="Search keywords...">
+                        </div>
+                        <div>
+                            <button class="buttons" type="submit"><i class="fas fa-search"></i> Find Property</button>
+                        </div>  
+                    </div>
+                    <div id="general_form_section">
+                        <div>
+                            <!--<label for="country"></label>-->
+                            <select class="form_control" name="country" id="country">
+                                <option value="0">Select Country</option>
+                                <option value="1">Trinidad</option>
+                            </select>
+                        </div>
+                        <div>
+                            <!--<label for="location"></label>-->
+                            <select class="form_control" name="location" id="location">
+                                <option value="0">Select Location</option>
+                                <option value="1">Santa Cruz</option>
+                            </select>
+                        </div>
+                        <div>
+                            <!--<label for="min_price"></label>-->
+                            <input class="form_control" type="number" name="min_price" id="min_price" placeholder="Minimum Price">
+                        </div>
+                        <div>
+                            <!--<label for="max_price"></label>-->
+                            <input class="form_control" type="number" name="max_price" id="max_price" placeholder="Maximum Price">
+                        </div>
+                        <div>
+                            <!--<label for="currency"></label>-->
+                            <select class="form_control" name="currency" id="currency">
+                                <option value="0">Currency</option>
+                                <option value="1">TTD</option>
+                            </select>
+                        </div>
+                        <div>
+                            <!--<label for="development"></label>-->
+                            <select class="form_control" name="property_type" id="property_type">
+                                <option value="0">Select Property Type</option>
+                                <option value="1">Residential</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="general_form_section_two">
+                        <div>
+                            <!--<label for="country"></label>-->
+                            <select class="form_control" name="bedroom" id="bedroom">
+                                <option value="0">Select Bedrooms</option>
+                                <option value="1">1+</option>
+                            </select>
+                        </div>
+                        <div>
+                            <!--<label for="location"></label>-->
+                            <select class="form_control" name="bathroom" id="bathroom">
+                                <option value="0">Select Bathroom</option>
+                                <option value="1">+1</option>
+                            </select>
+                        </div>
+                        <div>
+                            <!--<label for="min_price"></label>-->
+                            <input class="form_control" type="number" name="min_area" id="min_area" placeholder="Minimum Area">
+                        </div>
+                        <div>
+                            <!--<label for="max_price"></label>-->
+                            <input class="form_control" type="number" name="max_area" id="max_area" placeholder="Maximum Area">
+                        </div>
+                        <div>
+                            <!--<label for="currency"></label>-->
+                            <select class="form_control" name="area_unit" id="area_unit">
+                                <option value="0">Unit of Area</option>
+                                <option value="1">Sq-ft</option>
+                            </select>
+                        </div>
+                        <div>
+                            <!--<label for="development"></label>-->
+                            <select class="form_control" name="property_style" id="property_style">
+                                <option value="0">Select Property Style</option>
+                                <option value="1">Townhouse</option>
+                            </select>
+                        </div>
+                    </div>  
+                </div>
+            </form>
+        </section>
+        <section id="main_section_3" class="container"> <!--MAIN SECTION 3 - RECENT PROPERTIES-->
+            <div>
+                <h2>Recent Properties</h2>
+            </div>
+            <div class="container latest_properties_container">
+                <div class="latest_properties">
+                    <div>
+                        <img class="fit_img_width" src="/img/yellow_kitchen.jpeg" alt="">
+                    </div>
+                    <div>
+                        <div><h3>For Sale</h3></div>
+                        <div>
+                            <div>
+                                <h3><i class="fas fa-map-marker-alt"></i> Santa Cruz, Trinidad</h3>
+                            </div>
+                            <div><h3><i class="fas fa-dollar-sign"></i>1,000,000.00</h3></div>    
+                        </div>
+                        <div><a class="link_buttons" href=""><i class="fas fa-house-user"></i> More Details</a></div>
+                    </div>
+                </div>  
+                <div class="latest_properties">
+                    <div>
+                        <img class="fit_img_width" src="/img/house_pool.jpeg" alt="">
+                    </div>
+                    <div>
+                        <div><h3>For Rent</h3></div>
+                        <div>
+                            <div>
+                                <h3><i class="fas fa-map-marker-alt"></i> Santa Cruz, Trinidad</h3>
+                            </div>
+                            <div><h3><i class="fas fa-dollar-sign"></i>1,000,000.00</h3></div>    
+                        </div>
+                        <div><a class="link_buttons" href=""><i class="fas fa-house-user"></i> More Details</a></div>
+                    </div>
+                </div>     
+            </div> 
+        </section>
+        <section id="main_section_4"> <!--MAIN SECTION 4 - OUR SERVICES-->
+            <div>
+                <h2>What We Offer</h2>
+            </div>
+            <div class="full_width_banner"> <!--https://www.facebook.com/Security-and-Franchise-Employees-Credit-Union-110684430669609-->
+                <div>
+                    <div>
+                        <img src="/img/pool.jpg" alt="">
+                    </div>
+                    <div>
+                        <div>
+
+                        </div>
+                        <div>
+                            <h3>Renting & Selling of Real Estate</h3>
+                            <p>View our available listings or contact one of agents to find what you're looking for</p>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </section>
+        <section class="container"></section>
+        <section class="container"></section>
+        <section class="container"></section>
+        <section class="container"></section>
+        <section class="container"></section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src=""></script>
+</body>
+</html>
