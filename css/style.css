@@ -752,7 +752,7 @@ border-radius: 50px;
 
 #main_section_3
 {
-    margin-bottom: 224px;
+    margin-bottom: 208px;
     background-color: var(--bg_color_white_transparent);
 }
 
@@ -773,6 +773,7 @@ main section:nth-child(3) .latest_properties_container
     width: 560px;
     height: 315px;
     box-shadow: var(--material_card_box_shadow_subtle);
+    margin-bottom: 32px;
 }
 
 .latest_properties > div:first-child
@@ -939,7 +940,7 @@ main section:nth-child(3) .latest_properties_container
 {
     color: var(--font_color_black);
     background-color: var(--bg_color_white_transparent);
-    margin-bottom: 176px;
+    margin-bottom: 160px;
 }
 
 #main_section_5 h5
@@ -959,6 +960,7 @@ main section:nth-child(3) .latest_properties_container
 .featured_properties
 {
     box-shadow: var(--material_card_box_shadow_subtle);
+    margin-bottom: 64px;
 }
 
 .featured_properties:hover
