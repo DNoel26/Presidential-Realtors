@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Presidential Realtors & Associates | Home Page</title>
-    <meta property="og:url"           content="https://presidentialrealtors-dev.netlify.app/" />
+    <!--FB SHARE BUTTON META DATA BELOW-->
+    <!--<meta property="og:url"           content="https://presidentialrealtors-dev.netlify.app/" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="Presidential Realtors & Associates | Home Page" />
     <meta property="og:description"   content="View Our Listings, Services, Agents and More!!!" />
-    <meta property="og:image"         content="https://presidentialrealtors-dev.netlify.app/img/Presidential%20Realtors%20Final%20Logo-02.png" />
+    <meta property="og:image"         content="https://presidentialrealtors-dev.netlify.app/img/Presidential%20Realtors%20Final%20Logo-02.png" />-->
+    <!--FB SHARE BUTTON META DATA ABOVE-->
     <script src="https://kit.fontawesome.com/3ad7481254.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body id="body_homepage">
+    <!--FB SHARE BUTTON JS SDK BELOW-->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0" nonce="7t1F6phR"></script>
+    <!--FB SHARE BUTTON JS SDK ABOVE-->
     <header id="top_of_page">
         <nav id="top_nav">
             <div class="container">
@@ -376,14 +382,14 @@
         <section class="container"></section>
         <section class="container"></section>
     </main>
-    <div id="fb-root"></div>
+    <!--<div id="fb-root"></div>
     <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
     js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
     fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+    }(document, 'script', 'facebook-jssdk'));</script>-->
     <footer id="footer_homepage">
         <div>
             <a href="#top_of_page">Back to Top <i class="fas fa-hand-point-up"></i></a>
@@ -395,10 +401,13 @@
                 <li><a href="#main_section_2">Search Our Listings</a></li>
                 <li><a href="#main_section_4">Most Recent Listings</a></li>
                 <li><a href="#main_section_5">Our Featured Listings</a></li>
-                <div class="fb-share-button" 
+                <div class="fb-share-button" data-href="https://presidentialrealtors-dev.netlify.app/" data-layout="button_count" data-size="large">
+                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpresidentialrealtors-dev.netlify.app%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+                </div>
+                <!--<div class="fb-share-button" 
                     data-href="https://www.your-domain.com/your-page.html" 
                     data-layout="button_count">
-                </div>
+                </div>-->
             </ul>
         </nav>
     </footer>
