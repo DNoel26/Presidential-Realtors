@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Presidential Realtors & Associates | Home Page</title>
+    <meta property="og:url"           content="https://presidentialrealtors-dev.netlify.app/" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Presidential Realtors & Associates | Home Page" />
+    <meta property="og:description"   content="View Our Listings, Services, Agents and More!!!" />
+    <meta property="og:image"         content="https://presidentialrealtors-dev.netlify.app/img/Presidential%20Realtors%20Final%20Logo-02.png" />
     <script src="https://kit.fontawesome.com/3ad7481254.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;469;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body id="body_homepage">
@@ -17,9 +22,9 @@
                     <li><a href="mailto: info@presidentialrealtors.com"><i class="far fa-envelope"></i>info@presidentialrealtors.com</a></li> 
                 </ul>
                 <ul id="top_ul_right">
-                        <li><a href="https://www.facebook.com/presidential.realtors" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
-                        <li><a href=""><i class="far fa-user-circle"></i>Register</a></li>
-                        <li><a href=""><i class="fas fa-sign-in-alt"></i>Login</a></li>
+                    <li><a href="https://www.facebook.com/presidential.realtors" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href=""><i class="far fa-user-circle"></i>Register</a></li>
+                    <li><a href=""><i class="fas fa-sign-in-alt"></i>Login</a></li>
                 </ul>         
             </div>   
         </nav>
@@ -33,7 +38,7 @@
                     <li><a id="active_link" href="">Home</a></li>
                     <li><a href="">About Us<i class="fas fa-sort-down"></i></a></li>
                     <div id="about_us_dropdown" class="dropdown_div">       
-                        <li><a href="">Services Offered</a></li>
+                        <li><a href="#main_section_4">Services Offered</a></li>
                         <li><a href="">Board of Directors</a></li>
                         <li><a href="">Real Estate Agents</a></li>     
                     </div>
@@ -46,9 +51,9 @@
     <main id="main_homepage">
         <section id="hero_section"> <!--MAIN SECTION 1 - HERO-->
             <div class="container">
-                <h1>The <i class="fas fa-key"></i> to Your Dreams Becoming a Reality</h1>
+                <h1>The <a href=""><i class="fas fa-key"></i></a> to Your Dreams Becoming a Reality</h1>
                 <p>Find what you need. Our agents are here to help!</p>
-                <a href="#main_section_5"><i class="fas fa-house-user"></i> Featured Properties</a>
+                <a class="link_buttons" href="#main_section_5"><i class="fas fa-house-user"></i> Featured Properties</a>
             </div>
         </section>
         <section id="main_section_2" class="container"> <!--MAIN SECTION 2 - SEARCH FOR PROPERTIES-->
@@ -271,7 +276,7 @@
                         <div><h5><i class="far fa-square"></i> 2,500 Square Feet</h5></div>
                         <div><h5><i class="fas fa-bed"></i> 3 Bedrooms</h5></div>
                         <div><h5><i class="fas fa-bath"></i> 2.5 Bathrooms</h5></div>
-                        <div><h5><i class="far fa-user"></i> Darnell Noel</h5></div>
+                        <div><h5><i class="fas fa-hashtag"></i></i></i> 100</h5></div>
                         <div><h5><i class="fas fa-history"></i> 3 days ago</h5></div>
                     </div>
                     <div class="property_agency_container">
@@ -327,8 +332,11 @@
                         <div><h3>For Sale</h3></div>
                     </div>
                     <div class="property_details_container">
-                        <h3>#2 St. Joseph Street</h3>
-                        <h4>Arima, Trinidad & Tobago</h4>
+                        <div><a href=""><i class="fas fa-map-marker-alt"></i></a></div>
+                        <div>
+                            <h3>#2 St. Joseph Street</h3>
+                            <h4>Arima, Trinidad & Tobago</h4>
+                        </div>  
                     </div>
                     <div class="property_specs_container">
                         <div><h5><i class="fas fa-home"></i> Townhouse</h5></div>
@@ -355,27 +363,43 @@
                 </div>     
             </div> 
         </section>
-        <section id="main_section_6" class="full_width_banner">
+        <section id="main_section_last" class="full_width_banner">
             <div>
-                <h1>Still L<i class="fas fa-search"></i><i class="fas fa-search"></i>king to Make Your Next Big Move?</h1>
-                <p>Check out the links below</p>
-                <a class="link_buttons" href="">View All Listings</a>
-                <a class="link_buttons" href="">Contact an Agent</a>
+                <h1>L<i class="fas fa-search"></i><i class="fas fa-search"></i>king to Make Your Next Big Move?</h1>
+                <p>Check out the links below <i class="fas fa-level-down-alt"></i></p>
                 <a class="link_buttons" href="">Frequently Asked Questions</a>
+                <a class="link_buttons" href="">Contact an Agent</a>
+                <a class="link_buttons" href="">View Listings</a>
             </div>
         </section>
         <section class="container"></section>
         <section class="container"></section>
         <section class="container"></section>
     </main>
-    <footer>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <footer id="footer_homepage">
         <div>
             <a href="#top_of_page">Back to Top <i class="fas fa-hand-point-up"></i></a>
         </div>
-        <nav>
-            <div></div>
-            <div></div>
-            <div></div>
+        <nav id="footer_nav">
+            <ul class="container">
+                <li><h1>Presidential Realtors & Associates Limited</h1></li>
+                <li><a href="#top_of_page">Home</a></li>
+                <li><a href="#main_section_2">Search Our Listings</a></li>
+                <li><a href="#main_section_4">Most Recent Listings</a></li>
+                <li><a href="#main_section_5">Our Featured Listings</a></li>
+                <div class="fb-share-button" 
+                    data-href="https://www.your-domain.com/your-page.html" 
+                    data-layout="button_count">
+                </div>
+            </ul>
         </nav>
     </footer>
     <script src=""></script>

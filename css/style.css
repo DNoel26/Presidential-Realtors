@@ -7,6 +7,7 @@
     --main_bg_color_dark_shadow: rgba(38,17,56,0.5);
     --bg_color_white: #f5f5f5;
     --bg_color_white_transparent: rgba(245,245,245,0.2);
+    --bg_color_white_transparent_dark: rgba(245,245,245,0.9);
     --bg_color_black_transparent: rgba(25,25,25,0.2);
     --bg_color_black_transparent_light: rgba(10,10,10,0.1);
     --bg_color_blue: #1A1363;
@@ -40,25 +41,41 @@
     box-sizing: border-box;
 }
 
+                    /* ANIMATIONS START*/
+
+@keyframes pulsate
+{
+    from {transform: scale(1);}
+    to {transform: scale(1.05);}
+}
+
+@keyframes icon_oscillate 
+{
+    from, to { padding-top: 0;}
+    50% { padding-top: 8px;}
+}
+
+                    /*ANIMATIONS END*/
+
 ::-webkit-scrollbar, ::-webkit-scrollbar-thumb,
 ::-webkit-scrollbar-button:single-button
 {
     width: 12px !important;
-    height: 12px !important;
+    height: 8px !important;
     background-color: transparent !important;
 }
 
 ::-webkit-scrollbar-thumb
 {
     width: 12px !important;
-    height: 12px !important;
+    height: 8px !important;
     background-color: var(--bg_color_gold) !important;
 }
 
 ::-webkit-scrollbar-button:single-button
 {
     width: 12px !important;
-    height: 32px !important;
+    height: 16px !important;
     background-color: var(--main_bg_color) !important;
 }
 
@@ -107,6 +124,7 @@ html
 {
     text-decoration: none;
     font-size: 1.2rem;
+    font-weight: 500;
     background-color: var(--main_bg_color_transparent_dark);
     color: var(--main_font_color);
     padding: 8px 16px;
@@ -173,7 +191,7 @@ html
 
 body
 {
-    font-family: Verdana, sans-serif;/*'Oswald'*/
+    font-family: 'Roboto',Verdana, sans-serif;/*'Oswald'*/
     color: var(--main_font_color);
     letter-spacing: 0.01rem;
     word-spacing: 0.1rem;  
@@ -181,7 +199,7 @@ body
 
 #body_homepage
 {
-    font-weight: 100 !important;
+    font-weight: 300;
 }
 
 header, nav
@@ -395,14 +413,26 @@ nav a
 footer
 {
     /*background-color: var(--main_bg_color);*/
-    background: var(--bg_color_gold_transparent);
-    height: 400px;
-    margin-top: -400px; 
+    background: var(--bg_color_white_transparent_dark);
+    height: 320px;
+    margin-top: -320px; 
 }
 
 footer, footer i
 {
     text-shadow: 0px 1px 0px black;
+}
+
+footer i
+{
+    position: absolute;
+    padding-left: 8px;
+    animation: icon_oscillate 1s steps(80, end) infinite;
+}
+
+footer #top_of_page div:first-child
+{
+    position: relative;
 }
 
 footer nav
@@ -425,20 +455,42 @@ footer a
     width: max-content;
     justify-self: center;
     text-decoration: none;
-    color: var(--main_font_color);
-    background-color: var(--bg_color_white_transparent);
+    color: var(--font_color_black);
+    /*background-color: var(--bg_color_white_transparent);*/
     font-size: 1.6rem;
     /*background-color: red;*/
-    padding: 16px;
+    padding: 8px;
     transition: 0.4s;
+    font-weight: 500;
 }
 
 footer a:hover
 {
     color: var(--link_hover_color);
-    background-color: var(--bg_color_black_transparent);
+    /*background-color: var(--bg_color_black_transparent);*/
     transition: 0.4s;
-    
+}
+
+#footer_nav ul, #footer_nav li
+{
+    all: unset;
+}
+
+#footer_nav li, #footer_nav h1
+{
+    display: inline-block;
+    font-size: 1rem;
+}
+
+#footer_nav h1
+{
+    color: var(--font_color_blue);
+    margin-left: 16px;
+}
+
+#footer_nav li a
+{
+    font-size: 1rem;
 }
 
                     /*FOOTER SECTION END*/
@@ -447,7 +499,7 @@ footer a:hover
 
 #main_homepage img:hover
 {
-    transform: scale(1.2);
+    transform: scale(1.05);
     transition: 0.4s;
 }
 
@@ -464,9 +516,15 @@ footer a:hover
     display: grid;
 }
 
+#hero_section h1 i
+{
+    transition: 1.6s;
+}
+
 #hero_section h1 i:hover
 {
     color: var(--font_color_gold);
+    transition: 0.4s;
 }
 
 #hero_section > div
@@ -487,11 +545,7 @@ footer a:hover
 
 #hero_section h1
 {
-    text-shadow: 0px 1px 0px black;
-}
-
-#hero_section h1
-{
+    text-shadow: 0px 1px 0px black; 
     font-size: 2.4rem;
     padding: 8px 32px 24px 32px;
     letter-spacing: 0.2rem;
@@ -505,24 +559,19 @@ footer a:hover
     padding: 0 32px 0 32px;
 } 
 
-#hero_section a
+#hero_section div > a
 {
     width: max-content;
-    font-size: 1.2rem;
-    text-decoration: none;
-    background-color: var(--main_bg_color_transparent_dark);
-    color: var(--main_font_color);
     display: block;
     margin: auto;
     margin-top: 160px;
     margin-bottom: 32px;
     padding: 8px 16px;
     transition: 0.4s;
-    box-shadow: var(--material_card_box_shadow);
     /*border: 1px solid var(--bg_color_white);*/
 }
 
-#hero_section a:hover
+#hero_section div > a:hover
 {
     background-color: var(--bg_color_white);
     color: var(--font_color_purple);
@@ -531,6 +580,11 @@ footer a:hover
     /*border: 1px solid var(--main_bg_color);*/
 }
 
+#hero_section > div > h1 > a
+{
+    all: unset;
+    color: var(--main_font_color);
+}
                     /*HERO SECTION END*/
 
                     /*MAIN SECTION 2 - SEARCH - START*/
@@ -655,7 +709,7 @@ border-radius: 50px;
 
 #main_section_3
 {
-    margin-bottom: 144px;
+    margin-bottom: 224px;
     background-color: var(--bg_color_white_transparent);
 }
 
@@ -686,7 +740,7 @@ main section:nth-child(3) .latest_properties_container
 
 .latest_properties img
 {
-    filter: brightness(50%);
+    filter: brightness(70%);
     object-fit: cover;
     width: 560px;
     height: 315px;
@@ -695,7 +749,7 @@ main section:nth-child(3) .latest_properties_container
 
 .latest_properties:hover img
 {
-    transform: scale(1.2);
+    transform: scale(1.05);
     transition: 0.4s;
 }
 
@@ -764,14 +818,24 @@ main section:nth-child(3) .latest_properties_container
     background-color: var(--bg_color_white_transparent);
 }
 
+#main_section_4 .h2_format
+{
+    display: block;
+    color: var(--main_font_color);
+    padding: 0;
+    margin: 0;
+    margin: auto;
+}
+
 #main_section_4 .full_width_banner
 {
-    background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url("/img/pool.jpg"); 
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("/img/pool.jpg");
     background-position: top;
-    height: calc(100% - 61px);    
+    height: 100%;/*calc(100% - 61px);*/    
     text-shadow: 0px 1px 0px black;
     display: grid;
     align-items: center;
+    margin-top: -72px;
 }
 
 #main_section_4 .full_width_banner > div
@@ -832,7 +896,7 @@ main section:nth-child(3) .latest_properties_container
 {
     color: var(--font_color_black);
     background-color: var(--bg_color_white_transparent);
-    margin-bottom: 144px;
+    margin-bottom: 176px;
 }
 
 #main_section_5 h5
@@ -856,14 +920,14 @@ main section:nth-child(3) .latest_properties_container
 
 .featured_properties:hover
 {
-    transform: scale(1.01);
+    transform: scale(1.005);
 }
 
 .property_showing_container
 {
     height: 245px;
     position: relative;
-    margin-bottom: 16px;
+    margin: 16px;
     overflow: hidden;
 }
 
@@ -872,7 +936,6 @@ main section:nth-child(3) .latest_properties_container
     height: 245px;
     width: 100%;
     object-fit: cover;
-    padding: 16px;
     transition: 0.4s;
 }
 
@@ -890,6 +953,17 @@ main section:nth-child(3) .latest_properties_container
 {
     margin-bottom: 16px;
     margin-left: 16px;
+}
+
+.property_details_container > div
+{
+    display: inline-block;
+
+}
+
+.property_details_container > div i
+{
+    font-size: 1.2rem;
 }
 
 .property_specs_container
@@ -970,19 +1044,19 @@ main section:nth-child(3) .latest_properties_container
 
                        /*MAIN SECTION 6 - ALL LISTINGS - START*/
 
-#main_section_6
+#main_section_last
 {
     background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url("/img/move_in.jpg");
     height: 960px;
 }
 
-#main_section_6 > div
+#main_section_last > div
 {
-    height: 560px;
+    height: 640px;
     box-shadow: var(--material_card_box_shadow_subtle);
 }
 
-#main_section_6 i, #main_section_6 i::before
+#main_section_last i, #main_section_last i::before
 {
     display: inline-block;
     position: relative;
@@ -990,14 +1064,16 @@ main section:nth-child(3) .latest_properties_container
     font-size: 90%;
     color: var(--main_font_color);
     text-shadow: 0px 1px 0px black;
+    transition: 1.6s;
 }
 
-#main_section_6 i:hover, #main_section_6 i:hover::before
+#main_section_last i:hover, #main_section_last i:hover::before
 {
     color: var(--font_color_gold);
+    transition: 0.4s;
 }
 
-#main_section_6 h1, #main_section_6 p, #main_section_6 a
+#main_section_last h1, #main_section_last p, #main_section_last a
 {
     text-align: center;
     /*background-color: var(--main_bg_color_transparent);*/
@@ -1007,12 +1083,12 @@ main section:nth-child(3) .latest_properties_container
     z-index: 10;
 }
 
-#main_section_6 h1, #main_section_6 p
+#main_section_last h1, #main_section_last p
 {
     text-shadow: 0px 1px 0px black;
 }
 
-#main_section_6 h1
+#main_section_last h1
 {
     font-size: 2.4rem;
     padding: 96px 32px 24px 32px;
@@ -1021,13 +1097,13 @@ main section:nth-child(3) .latest_properties_container
     color: var(--main_font_color);
 }
 
-#main_section_6 p
+#main_section_last p
 {
     font-size: 1.5rem;
     padding: 0 32px 16px 32px;
 } 
 
-#main_section_6 a
+#main_section_last a
 {
     width: max-content;
     display: block;
