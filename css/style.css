@@ -2,12 +2,13 @@
 {
     --main_bg_color:#602A8C;
     --main_bg_color_transparent: rgba(96,42,140,0.18);
+    --main_bg_color_transparent_light: rgba(96,42,140,0.05);
     --main_bg_color_transparent_dark: rgba(96,42,140,0.67);
     --main_bg_color_light_shadow: rgba(154,67,224,0.1);
     --main_bg_color_dark_shadow: rgba(38,17,56,0.5);
     --bg_color_white: #f5f5f5;
     --bg_color_white_transparent: rgba(245,245,245,0.2);
-    --bg_color_white_transparent_dark: rgba(245,245,245,0.9);
+    --bg_color_white_transparent_dark: rgba(245,245,245,0.7);
     --bg_color_black_transparent: rgba(25,25,25,0.2);
     --bg_color_black_transparent_light: rgba(10,10,10,0.1);
     --bg_color_blue: #1A1363;
@@ -200,6 +201,7 @@ body
 #body_homepage
 {
     font-weight: 300;
+    background-color: var(--main_bg_color_transparent_light);
 }
 
 header, nav
@@ -385,13 +387,13 @@ nav a
     position: absolute;
 }
 
-#bottom_ul_right .dropdown_div
+#bottom_ul_right #about_us_dropdown.dropdown_div
 {
     background-color: none;
     position: absolute;
     z-index: 1000;
     top: 96px;
-    left: 213px; /*238*/
+    left: 236px; /*238*/
     text-align: left;
 }
 
@@ -414,8 +416,7 @@ footer
 {
     /*background-color: var(--main_bg_color);*/
     background: var(--bg_color_white_transparent_dark);
-    height: 320px;
-    margin-top: -320px; 
+    height: 208px;
 }
 
 footer, footer i
@@ -430,23 +431,25 @@ footer i
     animation: icon_oscillate 1s steps(80, end) infinite;
 }
 
-footer #top_of_page div:first-child
+footer div #top_of_page 
 {
     position: relative;
 }
 
-footer nav
-{
-    all: unset;
-}
-
-footer div
+footer > nav > div
 {
     width: 1200px;
     /*background-color: blue;*/
     margin: 0 auto;
     text-align: center;
+    display: block;
+}
+
+footer > nav > div > div:first-child
+{
+    /*background-color: blue;*/
     display: grid;
+    padding-top: 16px;
 }
 
 footer a
@@ -471,26 +474,65 @@ footer a:hover
     transition: 0.4s;
 }
 
-#footer_nav ul, #footer_nav li
+#footer_nav 
 {
-    all: unset;
+    /*background-color: red;*/
+    height: 100%;
+    background-color: var(--main_bg_color_transparent_light);
 }
 
-#footer_nav li, #footer_nav h1
+#footer_nav ul
+{
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+#footer_nav li
 {
     display: inline-block;
     font-size: 1rem;
+    font-weight: 300;
 }
 
 #footer_nav h1
 {
     color: var(--font_color_blue);
     margin-left: 16px;
+    margin-right: 8px;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+#footer_nav li
+{
+    border-right: 1px solid var(--font_color_black);
+}
+
+#footer_nav li:nth-child(2)
+{
+    border-left: 1px solid var(--font_color_black);
+}
+
+#footer_nav li:first-child
+{
+    border-right: none;
 }
 
 #footer_nav li a
 {
     font-size: 1rem;
+    font-weight: inherit;
+}
+
+.fb-share-button > *
+{
+    display: block;
+    padding-top: 16px;
+}
+
+footer .container
+{
+    justify-self: center;
 }
 
                     /*FOOTER SECTION END*/
@@ -516,15 +558,16 @@ footer a:hover
     display: grid;
 }
 
-#hero_section h1 i
+#hero_section h1 a
 {
     transition: 1.6s;
 }
 
-#hero_section h1 i:hover
+#hero_section h1 a:hover
 {
     color: var(--font_color_gold);
     transition: 0.4s;
+    cursor: pointer;
 }
 
 #hero_section > div
@@ -952,13 +995,10 @@ main section:nth-child(3) .latest_properties_container
 .property_details_container
 {
     margin-bottom: 16px;
-    margin-left: 16px;
-}
-
-.property_details_container > div
-{
-    display: inline-block;
-
+    margin-left: 20px;
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    align-items: center;
 }
 
 .property_details_container > div i
@@ -986,10 +1026,10 @@ main section:nth-child(3) .latest_properties_container
 .property_agency_container
 {
     display: grid;
-    grid-template-columns: 128px 1fr;
+    grid-template-columns: 48px 1fr;
     margin-left: 16px;
     margin-bottom: 16px;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
 }
 
 .property_agency_container > div:first-child
@@ -1000,17 +1040,19 @@ main section:nth-child(3) .latest_properties_container
 .property_agency_container > div:last-child
 {
     align-self: center;
-    margin-left: 4px;
+    margin-left: 8px;
+    overflow: hidden;
 }
 
 .property_agency_container img
 {
     display: block;
-    object-fit: contain;
-    width: 100%;
-    height: 128px;
+    object-fit: cover;
+    width: 48px;
+    height: 48px;
     margin: auto;
     transition: 0.4s;
+    border-radius: 48px;
 }
 
 .property_price_container
@@ -1047,13 +1089,13 @@ main section:nth-child(3) .latest_properties_container
 #main_section_last
 {
     background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url("/img/move_in.jpg");
-    height: 960px;
+    height: 608px;
 }
 
 #main_section_last > div
 {
-    height: 640px;
-    box-shadow: var(--material_card_box_shadow_subtle);
+    height: max-content;
+    /*box-shadow: var(--material_card_box_shadow_subtle);*/
 }
 
 #main_section_last i, #main_section_last i::before

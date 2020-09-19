@@ -8,7 +8,7 @@
     <meta property="og:url"           content="https://presidentialrealtors-dev.netlify.app/" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="Presidential Realtors & Associates | Home Page" />
-    <meta property="og:description"   content="View Our Listings, Services, Agents and More!!!!!!" />
+    <meta property="og:description"   content="View Our Listings, Services, Agents and More!!!" />
     <meta property="og:image"         content="https://presidentialrealtors-dev.netlify.app/img/Presidential%20Realtors%20Final%20Logo-02.png" />
     <!--FB SHARE BUTTON META DATA ABOVE-->
     <script src="https://kit.fontawesome.com/3ad7481254.js" crossorigin="anonymous"></script>
@@ -57,7 +57,7 @@
     <main id="main_homepage">
         <section id="hero_section"> <!--MAIN SECTION 1 - HERO-->
             <div class="container">
-                <h1>The <a href=""><i class="fas fa-key"></i></a> to Your Dreams Becoming a Reality</h1>
+                <h1>The <a href="#footer_nav"><i class="fas fa-key"></i></a> to Your Dreams Becoming a Reality</h1>
                 <p>Find what you need. Our agents are here to help!</p>
                 <a class="link_buttons" href="#main_section_5"><i class="fas fa-house-user"></i> Featured Properties</a>
             </div>
@@ -164,6 +164,7 @@
                 <h2 class="h2_format">Recent Properties</h2>
             </div>
             <div class="container latest_properties_container">
+                <!--FIRST LATEST PROPERTIES GRID CONTAINER BELOW-->
                 <div class="latest_properties">
                     <div>
                         <img class="fit_img_width" src="/img/yellow_kitchen.jpeg" alt="">
@@ -178,7 +179,8 @@
                         </div>
                         <div><a class="link_buttons" href=""><i class="fas fa-house-user"></i> Full Details</a></div>
                     </div>
-                </div>  
+                </div>
+                <!--FIRST LATEST PROPERTIES GRID CONTAINER ABOVE-->  
                 <div class="latest_properties">
                     <div>
                         <img class="fit_img_width" src="/img/house_pool.jpeg" alt="">
@@ -268,14 +270,18 @@
                 <h2 class="h2_format">Featured Properties</h2>
             </div>
             <div class="container featured_properties_container">
+                <!--FIRST FEATURED PROPERTIES GRID CONTAINER BELOW-->
                 <div class="featured_properties">
                     <div class="property_showing_container">
                         <div><img class="fit_img_width" src="/img/home_sc.jpeg" alt=""></div>
                         <div><h3>For Sale</h3></div>
                     </div>
                     <div class="property_details_container">
-                        <h3>#2 St. Joseph Street</h3>
-                        <h4>Arima, Trinidad & Tobago</h4>
+                        <div><a href=""><i class="fas fa-map-marker-alt"></i></a></div>
+                        <div>
+                            <h3>#2 St. Joseph Street</h3>
+                            <h4>Arima, Trinidad & Tobago</h4>
+                        </div>  
                     </div>
                     <div class="property_specs_container">
                         <div><h5><i class="fas fa-home"></i> Townhouse</h5></div>
@@ -290,7 +296,17 @@
                             <img class="fit_img_width" src="/img/Presidential Realtors Final Logo-02.png" alt="">
                         </div>
                         <div>
-                            <h4>Presidential Realtors & Associates</h3>
+                            <h4><i class="far fa-registered"></i> Presidential Realtors & Associates</h3>
+                        </div>
+                    </div>
+                    <div class="property_agency_container">
+                        <div>
+                            <img class="fit_img_width" src="/img/businessman.png" alt="">
+                        </div>
+                        <div>
+                            <h4><i class="fas fa-user-tie"></i> Darnell Noel</h4>
+                            <h4><i class="fab fa-whatsapp"></i> +1 868-777-7777</h4>
+                            <h4><i class="far fa-envelope"></i> darnell.noel@presidentialrealtors.com</h4>
                         </div>
                     </div>
                     <div class="property_price_container">
@@ -300,6 +316,7 @@
                         <a class="link_buttons" href="">Full Details</a>
                     </div>
                 </div>
+                <!--FIRST FEATURED PROPERTIES GRID CONTAINER ABOVE-->
                 <div class="featured_properties">
                     <div class="property_showing_container">
                         <div><img class="fit_img_width" src="/img/building.jpg" alt=""></div>
@@ -378,9 +395,9 @@
                 <a class="link_buttons" href="">View Listings</a>
             </div>
         </section>
+        <!--<section class="container"></section>
         <section class="container"></section>
-        <section class="container"></section>
-        <section class="container"></section>
+        <section class="container"></section>-->
     </main>
     <!--<div id="fb-root"></div>
     <script>(function(d, s, id) {
@@ -391,24 +408,27 @@
     fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>-->
     <footer id="footer_homepage">
-        <div>
-            <a href="#top_of_page">Back to Top <i class="fas fa-hand-point-up"></i></a>
-        </div>
         <nav id="footer_nav">
-            <ul class="container">
-                <li><h1>Presidential Realtors & Associates Limited</h1></li>
-                <li><a href="#top_of_page">Home</a></li>
-                <li><a href="#main_section_2">Search Our Listings</a></li>
-                <li><a href="#main_section_4">Most Recent Listings</a></li>
-                <li><a href="#main_section_5">Our Featured Listings</a></li>
-                <div class="fb-share-button" data-href="https://presidentialrealtors-dev.netlify.app/" data-layout="button_count" data-size="large">
-                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpresidentialrealtors-dev.netlify.app%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+            <div>
+                <div>
+                    <a href="#top_of_page">Back to Top <i class="fas fa-hand-point-up"></i></a>
                 </div>
-                <!--<div class="fb-share-button" 
-                    data-href="https://www.your-domain.com/your-page.html" 
-                    data-layout="button_count">
-                </div>-->
-            </ul>
+                <ul class="container">
+                    <li><h1>Copyright &copy; 2020 Presidential Realtors & Associates Limited. All Rights Reserved</h1></li>
+                    <li><a href="#top_of_page">Sitemap</a></li>
+                    <li><a href="#main_section_2">Privacy Policy</a></li>
+                    <li><a href="#main_section_4">Terms of Use</a></li>
+                    <li><a href="#main_section_5">Advertising</a></li>
+                    
+                    <!--<div class="fb-share-button" 
+                        data-href="https://www.your-domain.com/your-page.html" 
+                        data-layout="button_count">
+                    </div>-->
+                </ul>
+                <div class="container fb-share-button" data-href="https://presidentialrealtors-dev.netlify.app/" data-layout="button_count" data-size="large">
+                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpresidentialrealtors-dev.netlify.app%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+                </div>    
+            </div>  
         </nav>
     </footer>
     <script src=""></script>
