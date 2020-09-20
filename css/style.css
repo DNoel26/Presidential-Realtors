@@ -33,6 +33,8 @@
                             1px 1px 0 #602A8C;
     --material_card_box_shadow: 0 8px 16px 0 rgba(25,25,25,0.6);
     --material_card_box_shadow_subtle: 0 4px 8px 0 rgba(25,25,25,0.6);
+    --material_card_box_shadow_inset:   inset 0px 2px 4px 0 rgba(25,25,25,0.6), 
+                                        inset 0px -2px 4px 0 rgba(25,25,25,0.6);
 }
 
 *
@@ -46,8 +48,8 @@
 
 @keyframes pulsate
 {
-    from {transform: scale(1);}
-    to {transform: scale(1.05);}
+    from, to {transform: scale(1);}
+    50% {transform: scale(1.1);}
 }
 
 @keyframes icon_oscillate 
@@ -196,12 +198,12 @@ body
     color: var(--main_font_color);
     letter-spacing: 0.01rem;
     word-spacing: 0.1rem;  
+    background-color: var(--main_bg_color_transparent_light);
 }
 
 #body_homepage
 {
     font-weight: 300;
-    background-color: var(--main_bg_color_transparent_light);
 }
 
 header, nav
@@ -416,8 +418,8 @@ nav a
 
 footer
 {
-    /*background-color: var(--main_bg_color);*/
-    background: var(--bg_color_white_transparent_dark);
+    /*background-color: var(--main_bg_color);
+    background: var(--bg_color_white_transparent_dark);*/
     height: max-content;
 }
 
@@ -431,6 +433,7 @@ footer i
     position: absolute;
     padding-left: 8px;
     animation: icon_oscillate 1s steps(80, end) infinite;
+    font-weight: 100 !important;
 }
 
 footer div #top_of_page 
@@ -466,7 +469,7 @@ footer a
     /*background-color: red;*/
     padding: 16px;
     transition: 0.4s;
-    font-weight: 500;
+    font-weight: 300;
 }
 
 footer a:hover
@@ -601,7 +604,7 @@ footer .container
 
 #hero_section p
 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     padding: 0 32px 0 32px;
     text-shadow: 0px 1px 0px black; 
 } 
@@ -631,12 +634,6 @@ footer .container
 {
     all: unset;
     color: var(--main_font_color);
-}
-
-#body_directors #hero_section
-{   
-    background-image: url("../img/board_table.jpg");
-    height: 672px;
 }
                     
                     /*HERO SECTION END*/
@@ -1175,7 +1172,7 @@ main section:nth-child(3) .latest_properties_container
 #main_section_last p
 {
     font-size: 1.5rem;
-    padding: 0 32px 16px 32px;
+    padding: 16px 32px 16px 32px;
 } 
 
 #main_section_last a
@@ -1190,6 +1187,139 @@ main section:nth-child(3) .latest_properties_container
 
                     /*MAIN SECTION LAST - ALL LISTINGS - END*/
 
-                    /* DIRECTORS PAGE */
+                    /* OUR DIRECTORS PAGE START */
 
-                    /*MAIN SECTION LAST - ALL LISTINGS - END*/
+                    /*OUR DIRECTORS HERO SECTION - START*/
+
+#body_directors #hero_section
+{   
+    background-image: url("../img/board_table.jpg");
+    height: 640px;
+    margin-bottom: 114px;
+}
+
+                    /*OUR DIRECTORS HERO SECTION - END*/
+
+                    /*OUR DIRECTORS DIRECTORS SECTION - START*/
+
+#main_directors > section:last-child
+{
+    margin-bottom: 144px;
+    text-align: center;
+}
+
+#directors_section
+{
+    display: grid;
+    justify-content: left;
+    margin-left: 32px;
+    overflow: hidden;
+}
+
+.director_profile_card > div
+{
+    color: var(--font_color_black);
+    display: grid;
+    grid-template-columns: 960px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 144px;
+    position: relative;
+    height: 320px;
+    width: 320px;
+    z-index: 3;
+    top: 0;
+    left: 0;
+}
+
+.director_profile_card i
+{
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    color: var(--font_color_blue);
+    font-size: 1.6rem;
+    animation: pulsate 2s steps(80, end) infinite;
+}
+
+.director_profile_card > div:hover .director_profile_img_container
+{
+    margin-left: 640px;
+    transition: 0.75s;
+    background-color: var(--bg_color_white);
+}
+
+.director_profile_card > div:hover .director_profile_details_container
+{
+    width: 640px;
+    visibility: visible;
+}
+
+.director_profile_img_container
+{
+    width: 960px;
+    height: 320px;
+    padding: 0;
+    /*justify-self: right;*/
+    box-shadow: var(--material_card_box_shadow_subtle);
+    position: absolute;
+    z-index: 2;
+    transition: 1.25s;
+    background-color: var(--bg_color_white);
+}
+
+.director_profile_img_container h2
+{
+    position: absolute;
+    top: 64px;
+    left: 384px;
+}
+
+.director_profile_img_container img
+{
+    width: 320px;
+    height: 320px;
+    object-fit: cover; 
+    background-color: var(--bg_color_white);  
+}
+
+.director_profile_details_container
+{
+    padding-left: 32px;
+    padding-right: 32px;
+    height: 320px; /*320px;*/
+    width: 640px; /*320px;*/
+    margin: auto;
+    box-shadow: var(--material_card_box_shadow_inset);
+    display: grid;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    transition: 1.25s;
+    visibility: hidden;
+}
+
+.director_profile_details_container h2, .director_profile_details_container p
+{
+    text-align: justify;
+}
+
+.director_profile_details_container h2
+{
+    padding-bottom: 16px;
+}
+
+.director_profile_details_container h3
+{
+    padding-top: 16px;
+}
+
+                    /*OUR DIRECTORS DIRECTORS SECTION - END*/
+
+                    /*OUR ABOUT US HERO SECTION - START*/
+
+#main_about_us > section:last-child
+{
+    margin-bottom: 144px;
+    text-align: center;
+}
