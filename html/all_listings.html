@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presidential Realtors & Associates | Home Page</title>
+    <!--FB SHARE BUTTON META DATA BELOW-->
+    <meta property="og:url"           content="https://presidentialrealtors-dev.netlify.app/" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Presidential Realtors & Associates | Home Page" />
+    <meta property="og:description"   content="View Our Listings, Services, Agents and More!!!" />
+    <meta property="og:image"         content="https://presidentialrealtors-dev.netlify.app/img/Presidential%20Realtors%20Final%20Logo-02.png" />
+    <!--FB SHARE BUTTON META DATA ABOVE-->
+    <script src="https://kit.fontawesome.com/3ad7481254.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body id="body_listings">
+    <!--FB SHARE BUTTON JS SDK BELOW-->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0" nonce="7t1F6phR"></script>
+    <!--FB SHARE BUTTON JS SDK ABOVE-->
+    <header id="top_of_page">
+        <nav id="top_nav">
+            <div class="container">
+                <ul id="top_ul_left">
+                    <li><a href="https://api.whatsapp.com/send?phone=+18682841030" target="_blank"><i class="fab fa-whatsapp"></i>+1 (868)-284-1030</a></li>
+                    <li><a href="mailto: info@presidentialrealtors.com"><i class="far fa-envelope"></i>info@presidentialrealtors.com</a></li> 
+                </ul>
+                <ul id="top_ul_right">
+                    <li><a class="top_icon_links" href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                    <li><a class="top_icon_links" href="https://www.facebook.com/presidential.realtors" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a class="top_icon_links" href=""><i class="far fa-user"></i>Register</a></li>
+                    <li><a class="top_icon_links" href=""><i class="fas fa-sign-in-alt"></i>Login</a></li>
+                </ul>            
+            </div>   
+        </nav>
+        <nav id="bottom_nav">
+            <div class="container">
+                <ul id="bottom_ul_left">
+                    <div id="logo"><a href="../index.html"><img class="fit_img_height" src="../img/Presidential Realtors Final Logo-02.png" alt="Presidential Realtors Logo"></a></div>
+                </ul>
+                <ul id="bottom_ul_right">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="/html/about_us.html">About Us<i class="fas fa-sort-down"></i></a></li>
+                    <div id="about_us_dropdown" class="dropdown_div">       
+                        <li><a href="../index.html#main_section_4">Our Services</a></li>
+                        <li><a href="/html/our_directors.html">Board of Directors</a></li>
+                        <li><a href="/html/our_agents.html">Real Estate Agents</a></li>     
+                    </div>
+                    <li><a id="active_link" href="/html/all_listings.html">Listings</a></li>
+                    <li><a href="/html/contact_us.html">Contact Us</a></li>
+                </ul>     
+            </div>    
+        </nav>
+    </header>
+    <main id="main_listings">
+        <section id="hero_section"> <!--MAIN SECTION 1 - HERO-->
+            <form class="form_container" action="">
+                <div>
+                    <div id="search_section">
+                        <div>
+                            <select class="form_control" name="payments" id="payments">
+                                <option value="0">Buy</option>
+                                <option value="1">Rent</option>
+                            </select>
+                        </div>
+                        <div>
+                            <!--<label for="search"></label>-->
+                            <input class="form_control" type="search" name="search" id="search" placeholder="Search keywords...">
+                        </div>
+                        <div>
+                            <button class="buttons" type="submit"><i class="fas fa-search"></i> Find Property</button>
+                        </div>  
+                    </div>
+                    <div id="general_form_section">
+                        <div>
+                            <!--<label for="country"></label>-->
+                            <select class="form_control" name="country" id="country">
+                                <option value="0">Select Country</option>
+                                <option value="1">Trinidad</option>
+                            </select>
+                        </div>
+                        <div>
+                            <!--<label for="location"></label>-->
+                            <select class="form_control" name="location" id="location">
+                                <option value="0">Select Location</option>
+                                <option value="1">Santa Cruz</option>
+                            </select>
+                        </div>
+                        <div>
+                            <!--<label for="min_price"></label>-->
+                            <input class="form_control" type="number" name="min_price" id="min_price" placeholder="Minimum Price">
+                        </div>
+                        <div>
+                            <!--<label for="max_price"></label>-->
+                            <input class="form_control" type="number" name="max_price" id="max_price" placeholder="Maximum Price">
+                        </div>
+                        <div>
+                            <!--<label for="currency"></label>-->
+                            <select class="form_control" name="currency" id="currency">
+                                <option value="0">Currency</option>
+                                <option value="1">TTD</option>
+                            </select>
+                        </div>
+                        <div>
+                            <!--<label for="development"></label>-->
+                            <select class="form_control" name="property_type" id="property_type">
+                                <option value="0">Select Property Type</option>
+                                <option value="1">Residential</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="general_form_section_two">
+                        <div>
+                            <!--<label for="country"></label>-->
+                            <select class="form_control" name="bedroom" id="bedroom">
+                                <option value="0">Select Bedrooms</option>
+                                <option value="1">1+</option>
+                            </select>
+                        </div>
+                        <div>
+                            <!--<label for="location"></label>-->
+                            <select class="form_control" name="bathroom" id="bathroom">
+                                <option value="0">Select Bathroom</option>
+                                <option value="1">+1</option>
+                            </select>
+                        </div>
+                        <div>
+                            <!--<label for="min_price"></label>-->
+                            <input class="form_control" type="number" name="min_area" id="min_area" placeholder="Minimum Area">
+                        </div>
+                        <div>
+                            <!--<label for="max_price"></label>-->
+                            <input class="form_control" type="number" name="max_area" id="max_area" placeholder="Maximum Area">
+                        </div>
+                        <div>
+                            <!--<label for="currency"></label>-->
+                            <select class="form_control" name="area_unit" id="area_unit">
+                                <option value="0">Unit of Area</option>
+                                <option value="1">Sq-ft</option>
+                            </select>
+                        </div>
+                        <div>
+                            <!--<label for="development"></label>-->
+                            <select class="form_control" name="property_style" id="property_style">
+                                <option value="0">Select Property Style</option>
+                                <option value="1">Townhouse</option>
+                            </select>
+                        </div>
+                    </div>  
+                </div>
+            </form>
+        </section>
+        <section id="agent_section"> <!--MAIN SECTION 1 - HERO-->
+            <div class="container display_properties_container">
+                <!--FIRST LISTINGS CONTAINER BELOW-->
+                <div class="display_properties">
+                    <div class="property_showing_container">
+                        <div><a href="/html/listing_details.html"><img class="fit_img_width" src="/img/home_sc.jpeg" alt=""></a></div>
+                        <div><h3>For Sale</h3></div>
+                    </div>
+                    <div class="property_details_container">
+                        <div><a href=""><i class="fas fa-map-marker-alt"></i></a></div>
+                        <div>
+                            <h3>#2 St. Joseph Street</h3>
+                            <h4>Arima, Trinidad & Tobago</h4>
+                        </div>  
+                    </div>
+                    <div class="property_specs_container">
+                        <div><h5><i class="fas fa-home"></i> Townhouse</h5></div>
+                        <div><h5><i class="far fa-square"></i> 2,500 Square Feet</h5></div>
+                        <div><h5><i class="fas fa-bed"></i> 3 Bedrooms</h5></div>
+                        <div><h5><i class="fas fa-bath"></i> 2.5 Bathrooms</h5></div>
+                        <div><h5><i class="fas fa-hashtag"></i></i></i> 100</h5></div>
+                        <div><h5><i class="fas fa-history"></i> 3 days ago</h5></div>
+                    </div>
+                    <div class="property_agency_container">
+                        <div>
+                            <img class="fit_img_width" src="/img/Presidential Realtors Final Logo-02.png" alt="">
+                        </div>
+                        <div>
+                            <h4><i class="far fa-registered"></i> Presidential Realtors & Associates</h3>
+                        </div>
+                    </div>
+                    <div class="property_agency_container">
+                        <div>
+                            <img class="fit_img_width" src="/img/businessman.png" alt="">
+                        </div>
+                        <div>
+                            <h4><i class="fas fa-user-tie"></i> Darnell Noel</h4>
+                            <h4><a href="https://api.whatsapp.com/send?phone=+18682841030" target="_blank"><i class="fab fa-whatsapp"></i> +1 868-777-7777</a></h4>
+                            <h4><a href="mailto: darnell.noel@presidentialrealtors.com"><i class="far fa-envelope"></i> darnell.noel@presidentialrealtors.com</a></h4>
+                        </div>
+                    </div>
+                    <div class="property_price_container">
+                        <h3>TT<i class="fas fa-dollar-sign"></i>2,123,456.00</h3>
+                    </div>
+                    <div class="property_link_container">
+                        <a class="link_buttons" href="/html/listing_details.html">Full Details</a>
+                    </div>
+                </div>
+                <!--FIRST LISTINGS CONTAINER ABOVE--> 
+                <div class="display_properties">
+                    <div class="property_showing_container">
+                        <div><a href="/html/listing_details.html"><img class="fit_img_width" src="/img/home_sc.jpeg" alt=""></a></div>
+                        <div><h3>For Sale</h3></div>
+                    </div>
+                    <div class="property_details_container">
+                        <div><a href=""><i class="fas fa-map-marker-alt"></i></a></div>
+                        <div>
+                            <h3>#2 St. Joseph Street</h3>
+                            <h4>Arima, Trinidad & Tobago</h4>
+                        </div>  
+                    </div>
+                    <div class="property_specs_container">
+                        <div><h5><i class="fas fa-home"></i> Townhouse</h5></div>
+                        <div><h5><i class="far fa-square"></i> 2,500 Square Feet</h5></div>
+                        <div><h5><i class="fas fa-bed"></i> 3 Bedrooms</h5></div>
+                        <div><h5><i class="fas fa-bath"></i> 2.5 Bathrooms</h5></div>
+                        <div><h5><i class="fas fa-hashtag"></i></i></i> 100</h5></div>
+                        <div><h5><i class="fas fa-history"></i> 3 days ago</h5></div>
+                    </div>
+                    <div class="property_agency_container">
+                        <div>
+                            <img class="fit_img_width" src="/img/Presidential Realtors Final Logo-02.png" alt="">
+                        </div>
+                        <div>
+                            <h4><i class="far fa-registered"></i> Presidential Realtors & Associates</h3>
+                        </div>
+                    </div>
+                    <div class="property_agency_container">
+                        <div>
+                            <img class="fit_img_width" src="/img/businessman.png" alt="">
+                        </div>
+                        <div>
+                            <h4><i class="fas fa-user-tie"></i> Darnell Noel</h4>
+                            <h4><a href="https://api.whatsapp.com/send?phone=+18682841030" target="_blank"><i class="fab fa-whatsapp"></i> +1 868-777-7777</a></h4>
+                            <h4><a href="mailto: darnell.noel@presidentialrealtors.com"><i class="far fa-envelope"></i> darnell.noel@presidentialrealtors.com</a></h4>
+                        </div>
+                    </div>
+                    <div class="property_price_container">
+                        <h3>TT<i class="fas fa-dollar-sign"></i>2,123,456.00</h3>
+                    </div>
+                    <div class="property_link_container">
+                        <a class="link_buttons" href="/html/listing_details.html">Full Details</a>
+                    </div>
+                </div>
+                <div class="display_properties">
+                    <div class="property_showing_container">
+                        <div><a href="/html/listing_details.html"><img class="fit_img_width" src="/img/home_sc.jpeg" alt=""></a></div>
+                        <div><h3>For Sale</h3></div>
+                    </div>
+                    <div class="property_details_container">
+                        <div><a href=""><i class="fas fa-map-marker-alt"></i></a></div>
+                        <div>
+                            <h3>#2 St. Joseph Street</h3>
+                            <h4>Arima, Trinidad & Tobago</h4>
+                        </div>  
+                    </div>
+                    <div class="property_specs_container">
+                        <div><h5><i class="fas fa-home"></i> Townhouse</h5></div>
+                        <div><h5><i class="far fa-square"></i> 2,500 Square Feet</h5></div>
+                        <div><h5><i class="fas fa-bed"></i> 3 Bedrooms</h5></div>
+                        <div><h5><i class="fas fa-bath"></i> 2.5 Bathrooms</h5></div>
+                        <div><h5><i class="fas fa-hashtag"></i></i></i> 100</h5></div>
+                        <div><h5><i class="fas fa-history"></i> 3 days ago</h5></div>
+                    </div>
+                    <div class="property_agency_container">
+                        <div>
+                            <img class="fit_img_width" src="/img/Presidential Realtors Final Logo-02.png" alt="">
+                        </div>
+                        <div>
+                            <h4><i class="far fa-registered"></i> Presidential Realtors & Associates</h3>
+                        </div>
+                    </div>
+                    <div class="property_agency_container">
+                        <div>
+                            <img class="fit_img_width" src="/img/businessman.png" alt="">
+                        </div>
+                        <div>
+                            <h4><i class="fas fa-user-tie"></i> Darnell Noel</h4>
+                            <h4><a href="https://api.whatsapp.com/send?phone=+18682841030" target="_blank"><i class="fab fa-whatsapp"></i> +1 868-777-7777</a></h4>
+                            <h4><a href="mailto: darnell.noel@presidentialrealtors.com"><i class="far fa-envelope"></i> darnell.noel@presidentialrealtors.com</a></h4>
+                        </div>
+                    </div>
+                    <div class="property_price_container">
+                        <h3>TT<i class="fas fa-dollar-sign"></i>2,123,456.00</h3>
+                    </div>
+                    <div class="property_link_container">
+                        <a class="link_buttons" href="/html/listing_details.html">Full Details</a>
+                    </div>
+                </div>
+                <div class="display_properties">
+                    <div class="property_showing_container">
+                        <div><a href="/html/listing_details.html"><img class="fit_img_width" src="/img/home_sc.jpeg" alt=""></a></div>
+                        <div><h3>For Sale</h3></div>
+                    </div>
+                    <div class="property_details_container">
+                        <div><a href=""><i class="fas fa-map-marker-alt"></i></a></div>
+                        <div>
+                            <h3>#2 St. Joseph Street</h3>
+                            <h4>Arima, Trinidad & Tobago</h4>
+                        </div>  
+                    </div>
+                    <div class="property_specs_container">
+                        <div><h5><i class="fas fa-home"></i> Townhouse</h5></div>
+                        <div><h5><i class="far fa-square"></i> 2,500 Square Feet</h5></div>
+                        <div><h5><i class="fas fa-bed"></i> 3 Bedrooms</h5></div>
+                        <div><h5><i class="fas fa-bath"></i> 2.5 Bathrooms</h5></div>
+                        <div><h5><i class="fas fa-hashtag"></i></i></i> 100</h5></div>
+                        <div><h5><i class="fas fa-history"></i> 3 days ago</h5></div>
+                    </div>
+                    <div class="property_agency_container">
+                        <div>
+                            <img class="fit_img_width" src="/img/Presidential Realtors Final Logo-02.png" alt="">
+                        </div>
+                        <div>
+                            <h4><i class="far fa-registered"></i> Presidential Realtors & Associates</h3>
+                        </div>
+                    </div>
+                    <div class="property_agency_container">
+                        <div>
+                            <img class="fit_img_width" src="/img/businessman.png" alt="">
+                        </div>
+                        <div>
+                            <h4><i class="fas fa-user-tie"></i> Darnell Noel</h4>
+                            <h4><a href="https://api.whatsapp.com/send?phone=+18682841030" target="_blank"><i class="fab fa-whatsapp"></i> +1 868-777-7777</a></h4>
+                            <h4><a href="mailto: darnell.noel@presidentialrealtors.com"><i class="far fa-envelope"></i> darnell.noel@presidentialrealtors.com</a></h4>
+                        </div>
+                    </div>
+                    <div class="property_price_container">
+                        <h3>TT<i class="fas fa-dollar-sign"></i>2,123,456.00</h3>
+                    </div>
+                    <div class="property_link_container">
+                        <a class="link_buttons" href="/html/listing_details.html">Full Details</a>
+                    </div>
+                </div>
+                <div class="display_properties">
+                    <div class="property_showing_container">
+                        <div><a href="/html/listing_details.html"><img class="fit_img_width" src="/img/home_sc.jpeg" alt=""></a></div>
+                        <div><h3>For Sale</h3></div>
+                    </div>
+                    <div class="property_details_container">
+                        <div><a href=""><i class="fas fa-map-marker-alt"></i></a></div>
+                        <div>
+                            <h3>#2 St. Joseph Street</h3>
+                            <h4>Arima, Trinidad & Tobago</h4>
+                        </div>  
+                    </div>
+                    <div class="property_specs_container">
+                        <div><h5><i class="fas fa-home"></i> Townhouse</h5></div>
+                        <div><h5><i class="far fa-square"></i> 2,500 Square Feet</h5></div>
+                        <div><h5><i class="fas fa-bed"></i> 3 Bedrooms</h5></div>
+                        <div><h5><i class="fas fa-bath"></i> 2.5 Bathrooms</h5></div>
+                        <div><h5><i class="fas fa-hashtag"></i></i></i> 100</h5></div>
+                        <div><h5><i class="fas fa-history"></i> 3 days ago</h5></div>
+                    </div>
+                    <div class="property_agency_container">
+                        <div>
+                            <img class="fit_img_width" src="/img/Presidential Realtors Final Logo-02.png" alt="">
+                        </div>
+                        <div>
+                            <h4><i class="far fa-registered"></i> Presidential Realtors & Associates</h3>
+                        </div>
+                    </div>
+                    <div class="property_agency_container">
+                        <div>
+                            <img class="fit_img_width" src="/img/businessman.png" alt="">
+                        </div>
+                        <div>
+                            <h4><i class="fas fa-user-tie"></i> Darnell Noel</h4>
+                            <h4><a href="https://api.whatsapp.com/send?phone=+18682841030" target="_blank"><i class="fab fa-whatsapp"></i> +1 868-777-7777</a></h4>
+                            <h4><a href="mailto: darnell.noel@presidentialrealtors.com"><i class="far fa-envelope"></i> darnell.noel@presidentialrealtors.com</a></h4>
+                        </div>
+                    </div>
+                    <div class="property_price_container">
+                        <h3>TT<i class="fas fa-dollar-sign"></i>2,123,456.00</h3>
+                    </div>
+                    <div class="property_link_container">
+                        <a class="link_buttons" href="/html/listing_details.html">Full Details</a>
+                    </div>
+                </div>
+                <div class="display_properties">
+                    <div class="property_showing_container">
+                        <div><a href="/html/listing_details.html"><img class="fit_img_width" src="/img/home_sc.jpeg" alt=""></a></div>
+                        <div><h3>For Sale</h3></div>
+                    </div>
+                    <div class="property_details_container">
+                        <div><a href=""><i class="fas fa-map-marker-alt"></i></a></div>
+                        <div>
+                            <h3>#2 St. Joseph Street</h3>
+                            <h4>Arima, Trinidad & Tobago</h4>
+                        </div>  
+                    </div>
+                    <div class="property_specs_container">
+                        <div><h5><i class="fas fa-home"></i> Townhouse</h5></div>
+                        <div><h5><i class="far fa-square"></i> 2,500 Square Feet</h5></div>
+                        <div><h5><i class="fas fa-bed"></i> 3 Bedrooms</h5></div>
+                        <div><h5><i class="fas fa-bath"></i> 2.5 Bathrooms</h5></div>
+                        <div><h5><i class="fas fa-hashtag"></i></i></i> 100</h5></div>
+                        <div><h5><i class="fas fa-history"></i> 3 days ago</h5></div>
+                    </div>
+                    <div class="property_agency_container">
+                        <div>
+                            <img class="fit_img_width" src="/img/Presidential Realtors Final Logo-02.png" alt="">
+                        </div>
+                        <div>
+                            <h4><i class="far fa-registered"></i> Presidential Realtors & Associates</h3>
+                        </div>
+                    </div>
+                    <div class="property_agency_container">
+                        <div>
+                            <img class="fit_img_width" src="/img/businessman.png" alt="">
+                        </div>
+                        <div>
+                            <h4><i class="fas fa-user-tie"></i> Darnell Noel</h4>
+                            <h4><a href="https://api.whatsapp.com/send?phone=+18682841030" target="_blank"><i class="fab fa-whatsapp"></i> +1 868-777-7777</a></h4>
+                            <h4><a href="mailto: darnell.noel@presidentialrealtors.com"><i class="far fa-envelope"></i> darnell.noel@presidentialrealtors.com</a></h4>
+                        </div>
+                    </div>
+                    <div class="property_price_container">
+                        <h3>TT<i class="fas fa-dollar-sign"></i>2,123,456.00</h3>
+                    </div>
+                    <div class="property_link_container">
+                        <a class="link_buttons" href="/html/listing_details.html">Full Details</a>
+                    </div>
+                </div>
+                <div class="display_properties">
+                    <div class="property_showing_container">
+                        <div><a href="/html/listing_details.html"><img class="fit_img_width" src="/img/home_sc.jpeg" alt=""></a></div>
+                        <div><h3>For Sale</h3></div>
+                    </div>
+                    <div class="property_details_container">
+                        <div><a href=""><i class="fas fa-map-marker-alt"></i></a></div>
+                        <div>
+                            <h3>#2 St. Joseph Street</h3>
+                            <h4>Arima, Trinidad & Tobago</h4>
+                        </div>  
+                    </div>
+                    <div class="property_specs_container">
+                        <div><h5><i class="fas fa-home"></i> Townhouse</h5></div>
+                        <div><h5><i class="far fa-square"></i> 2,500 Square Feet</h5></div>
+                        <div><h5><i class="fas fa-bed"></i> 3 Bedrooms</h5></div>
+                        <div><h5><i class="fas fa-bath"></i> 2.5 Bathrooms</h5></div>
+                        <div><h5><i class="fas fa-hashtag"></i></i></i> 100</h5></div>
+                        <div><h5><i class="fas fa-history"></i> 3 days ago</h5></div>
+                    </div>
+                    <div class="property_agency_container">
+                        <div>
+                            <img class="fit_img_width" src="/img/Presidential Realtors Final Logo-02.png" alt="">
+                        </div>
+                        <div>
+                            <h4><i class="far fa-registered"></i> Presidential Realtors & Associates</h3>
+                        </div>
+                    </div>
+                    <div class="property_agency_container">
+                        <div>
+                            <img class="fit_img_width" src="/img/businessman.png" alt="">
+                        </div>
+                        <div>
+                            <h4><i class="fas fa-user-tie"></i> Darnell Noel</h4>
+                            <h4><a href="https://api.whatsapp.com/send?phone=+18682841030" target="_blank"><i class="fab fa-whatsapp"></i> +1 868-777-7777</a></h4>
+                            <h4><a href="mailto: darnell.noel@presidentialrealtors.com"><i class="far fa-envelope"></i> darnell.noel@presidentialrealtors.com</a></h4>
+                        </div>
+                    </div>
+                    <div class="property_price_container">
+                        <h3>TT<i class="fas fa-dollar-sign"></i>2,123,456.00</h3>
+                    </div>
+                    <div class="property_link_container">
+                        <a class="link_buttons" href="/html/listing_details.html">Full Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container pagination">
+            <div>
+                PAGINATION
+            </div>
+        </section>
+    </main>
+    <footer id="bottom_of_page">
+        <nav id="footer_nav">
+            <div>
+                <div>
+                    <a href="#top_of_page">Back to Top <i class="fas fa-hand-point-up"></i></a>
+                </div>
+                <div class="container fb-share-button" data-href="https://presidentialrealtors-dev.netlify.app/" data-layout="button_count" data-size="large">
+                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpresidentialrealtors-dev.netlify.app%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+                </div>  
+                <ul class="container">
+                    <li><h1>Copyright &copy; 2020 Presidential Realtors & Associates Limited. All Rights Reserved</h1></li>
+                    <li><a href="#top_of_page">Sitemap</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms of Use</a></li>
+                    <li><a href="">Advertising</a></li>
+                </ul> 
+            </div>  
+        </nav>
+    </footer>
+    <script src=""></script>
+</body>
+</html>

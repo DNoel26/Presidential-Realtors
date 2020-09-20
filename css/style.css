@@ -33,8 +33,10 @@
                             1px 1px 0 #602A8C;
     --material_card_box_shadow: 0 8px 16px 0 rgba(25,25,25,0.6);
     --material_card_box_shadow_subtle: 0 4px 8px 0 rgba(25,25,25,0.6);
-    --material_card_box_shadow_inset:   inset 0px 2px 4px 0 rgba(25,25,25,0.6), 
-                                        inset 0px -2px 4px 0 rgba(25,25,25,0.6);
+    --material_card_box_shadow_subtle_2: 0 2px 4px 0 rgba(25,25,25,0.6);
+    --material_card_box_shadow_large: 0 16px 48px 0 rgba(25,25,25,0.9);
+    --material_card_box_shadow_inset:   inset 0 8px 16px 0 rgba(25,25,25,0.6), 
+                                        inset 0 -8px 16px 0 rgba(25,25,25,0.6);
 }
 
 *
@@ -49,7 +51,7 @@
 @keyframes pulsate
 {
     from, to {transform: scale(1);}
-    50% {transform: scale(1.1);}
+    50% {transform: scale(1.25);}
 }
 
 @keyframes icon_oscillate 
@@ -89,11 +91,26 @@ html
 
                     /* GENERAL CLASSES AND IDS BELOW */
 
+.preload *
+{
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+
 .container
 {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 16px;
+}
+
+.top_icon_links
+{
+    font-size: 1.25rem;
+    font-weight: 400;
 }
 
 .buttons
@@ -553,7 +570,7 @@ footer .container
 
 #hero_section
 {
-    background-image: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.18)), url("/img/purple_home.jpg"); 
+    background-image: linear-gradient(rgba(0,0,0,0.33), rgba(0,0,0,0.33)), url("/img/purple_home.jpg"); 
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -642,11 +659,11 @@ footer .container
 
 #main_section_2
 {
-    background-color: var(--main_bg_color_transparent_dark);
+    /*background-color: var(--main_bg_color_transparent_dark);*/
     margin-bottom: 144px;
     margin-top: -76px;
-    box-shadow: var(--material_card_box_shadow);
-    width: 1168px;
+    /*box-shadow: var(--material_card_box_shadow);
+    width: 1168px;*/
     display: grid;
 }
 
@@ -712,6 +729,9 @@ footer .container
 {
     padding: 8px 16px;
     margin: 0 auto;
+    background-color: var(--main_bg_color_transparent_dark);
+    box-shadow: var(--material_card_box_shadow);
+    width: 1168px;
 }
 
 .form_container label
@@ -963,27 +983,28 @@ main section:nth-child(3) .latest_properties_container
     padding: 4px;
 }
 
-.featured_properties_container
+.display_properties_container
 {
     display: grid;
     margin: auto;
     grid-template-columns: repeat(3,368px);
     gap: 16px;
+    color: var(--font_color_black);
 }
 
-.featured_properties
+.display_properties
 {
     box-shadow: var(--material_card_box_shadow_subtle);
     margin-bottom: 64px;
 }
 
-.featured_properties h4
+.display_properties h4
 {
     padding-top: 1px;
     padding-bottom: 1px;
 }
 
-.featured_properties:hover
+.display_properties:hover
 {
     transform: scale(1.003);
 }
@@ -1085,6 +1106,17 @@ main section:nth-child(3) .latest_properties_container
     font-weight: 900;
 }
 
+.property_agency_container a
+{
+    text-decoration: none;
+    color: var(--font_color_black);
+}
+
+.property_agency_container a:hover
+{
+    color: var(--font_color_purple);
+}
+
 .property_price_container
 {
     display: grid;
@@ -1114,7 +1146,7 @@ main section:nth-child(3) .latest_properties_container
 
                     /*MAIN SECTION 5 - FEATURED - END*/
 
-                    /*MAIN SECTION LAST - ALL LISTINGS - START*/
+                    /*MAIN SECTION LAST - LINKS - START*/
 
 #main_section_last
 {
@@ -1185,15 +1217,13 @@ main section:nth-child(3) .latest_properties_container
     /*border: 1px solid var(--bg_color_white);*/
 }
 
-                    /*MAIN SECTION LAST - ALL LISTINGS - END*/
-
-                    /* OUR DIRECTORS PAGE START */
+                    /*MAIN SECTION LAST - LINKS - END*/
 
                     /*OUR DIRECTORS HERO SECTION - START*/
 
 #body_directors #hero_section
 {   
-    background-image: url("../img/board_table.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.18)), url("../img/board_table.jpg");
     height: 640px;
     margin-bottom: 114px;
 }
@@ -1212,11 +1242,11 @@ main section:nth-child(3) .latest_properties_container
 {
     display: grid;
     justify-content: left;
-    margin-left: 32px;
+    margin-left: 96px;
     overflow: hidden;
 }
 
-.director_profile_card > div
+.director_profile_container > div
 {
     color: var(--font_color_black);
     display: grid;
@@ -1232,7 +1262,7 @@ main section:nth-child(3) .latest_properties_container
     left: 0;
 }
 
-.director_profile_card i
+.director_profile_container i
 {
     position: absolute;
     top: 8px;
@@ -1240,19 +1270,39 @@ main section:nth-child(3) .latest_properties_container
     color: var(--font_color_blue);
     font-size: 1.6rem;
     animation: pulsate 2s steps(80, end) infinite;
+    text-shadow: 0px 1px 0px white;
 }
 
-.director_profile_card > div:hover .director_profile_img_container
+.director_profile_container > div:hover .director_profile_img_container
 {
-    margin-left: 640px;
-    transition: 0.75s;
+    margin-left: 656px;
+    margin-top: 64px;
+    transform: scale(1.1);
+    width: 320px;
+    transition: 0.4s;
+    transition-timing-function: steps(500, start);
     background-color: var(--bg_color_white);
+    box-shadow: var(--material_card_box_shadow_large);
+    border: none;
 }
 
-.director_profile_card > div:hover .director_profile_details_container
+.director_profile_container > div:hover .director_profile_img_container h2
 {
-    width: 640px;
+    visibility: hidden;
+    transition: 0s;
+}
+
+.director_profile_container > div:hover .director_profile_img_container i
+{
+    display: none;
+}
+
+.director_profile_container > div:hover .director_profile_details_container
+{
+    width: 672px;
     visibility: visible;
+    box-shadow: var(--material_card_box_shadow_inset);
+    transition: 0.8s;
 }
 
 .director_profile_img_container
@@ -1261,18 +1311,35 @@ main section:nth-child(3) .latest_properties_container
     height: 320px;
     padding: 0;
     /*justify-self: right;*/
-    box-shadow: var(--material_card_box_shadow_subtle);
     position: absolute;
     z-index: 2;
-    transition: 1.25s;
+    transition: 0.8s;
+    transition-timing-function: steps(500, start);
     background-color: var(--bg_color_white);
+    box-shadow: var(--material_card_box_shadow_subtle);
+    /*border: 1px solid var(--font_color_black);*/
 }
 
 .director_profile_img_container h2
 {
     position: absolute;
-    top: 64px;
+    visibility: visible;
+    transition-delay: 0.8s;
+    font-size: 2.4rem;
+}
+
+.director_profile_img_container h2:first-of-type
+{
+    top: 56px;
     left: 384px;
+}
+
+.director_profile_img_container h2:last-of-type
+{
+    top: 144px;
+    left: 384px;
+    font-size: 2rem;
+    font-weight: 400;
 }
 
 .director_profile_img_container img
@@ -1286,16 +1353,16 @@ main section:nth-child(3) .latest_properties_container
 .director_profile_details_container
 {
     padding-left: 32px;
-    padding-right: 32px;
+    padding-right: 64px;
     height: 320px; /*320px;*/
-    width: 640px; /*320px;*/
+    width: 672px; /*320px;*/
     margin: auto;
-    box-shadow: var(--material_card_box_shadow_inset);
+    box-shadow: none;
     display: grid;
     align-items: center;
     position: absolute;
     z-index: 1;
-    transition: 1.25s;
+    transition: 1.6s;
     visibility: hidden;
 }
 
@@ -1316,10 +1383,211 @@ main section:nth-child(3) .latest_properties_container
 
                     /*OUR DIRECTORS DIRECTORS SECTION - END*/
 
-                    /*OUR ABOUT US HERO SECTION - START*/
+                    /*OUR AGENTS HERO SECTION - START*/
 
-#main_about_us > section:last-child
+#main_agents > section:last-child
 {
     margin-bottom: 144px;
     text-align: center;
 }
+
+#body_agents #hero_section
+{   
+    background-image: linear-gradient(rgba(0,0,0,0.33), rgba(0,0,0,0.33)), url("../img/covered.jpg");
+    background-position: top;
+    height: 960px;
+    margin-bottom: 114px;
+}
+
+                    /*OUR AGENTS HERO SECTION - END*/
+
+                    /*OUR AGENTS PROFILE SECTION - START*/
+
+#agent_section
+{
+    margin-bottom: 144px;
+}
+
+.agent_profile_container
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 48px;
+}
+
+.agent_profile_card
+{
+    display: grid;
+    color: var(--font_color_black);
+    grid-template-columns: 240px 320px;
+    grid-auto-flow: dense;
+    box-shadow: var(--material_card_box_shadow_subtle_2);
+}
+
+/*.agent_profile_card:nth-child(odd)
+{
+    grid-template-columns: 320px 240px;
+}
+
+.agent_profile_card:nth-child(odd) .agent_profile_img_container
+{
+    grid-column: 2;
+}
+
+.agent_profile_card:nth-child(odd) .agent_profile_details_container
+{
+    grid-column: 1;
+}
+
+.agent_profile_card:nth-child(even)
+{
+    grid-template-columns: 240px 320px;
+}*/
+
+.agent_profile_card h2
+{
+    font-size: 1rem;
+}
+
+.agent_profile_card h3
+{
+    font-size: 0.8rem;
+}
+
+.agent_profile_img_container
+{
+    height: 240px;
+    width: 100%;
+    margin: 8px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+/*.agent_profile_img_container:nth-child(odd)
+{
+    grid-column: 2 / span 1;
+}
+
+.agent_profile_img_container:nth-child(odd)
+{
+    grid-column: 1 / span 1;
+}*/
+
+.agent_profile_img_container img
+{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.agent_profile_img_container img:hover
+{
+    transform: scale(1.2);
+    transition: 0.4s;
+}
+
+.agent_profile_details_container 
+{
+    margin-left: 16px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/*.agent_profile_details_container:nth-child(odd)
+{
+    grid-column: 1 / span 1;
+}
+
+.agent_profile_details_container:nth-child(even)
+{
+    grid-column: 2 / span 1;
+}*/
+
+.agent_profile_details_container h2
+{
+    padding-bottom: 16px;
+}
+
+.agent_profile_details_container h3
+{
+    padding-top: 8px;
+}
+
+.agent_profile_details_container i
+{
+    width: 24px;
+    text-align: center;
+    color: var(--font_color_purple);
+}
+
+.agent_profile_details_container ul
+{
+    padding-top: 24px;
+}
+
+.agent_profile_details_container li
+{
+    display: inline-block !important;
+}
+
+.agent_profile_details_container a
+{
+    text-decoration: none;
+    color: inherit;
+    transition: 0.4s;
+}
+
+.agent_profile_details_container a:hover
+{
+    color: var(--font_color_purple);
+    transform: scale(1.5);
+    transition: 0.4s;
+}
+
+.agent_profile_details_container a:hover i
+{
+    transform: scale(1.5);
+    transition: 0.4s;
+}
+
+                    /*OUR AGENTS PROFILE SECTION - END*/
+
+                    /*OUR LISTINGS HERO SECTION - START*/
+
+#main_listings #hero_section
+{
+    background-image: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.18)), url("../img/new_home_2.jpg");
+    background-position: center;
+    height: 960px;
+    margin-bottom: 114px;
+}
+                    
+#main_listings .form_container
+{
+    margin: auto;
+    margin-top: 500px;
+}
+
+                    /*OUR LISTINGS HERO SECTION - END*/
+
+                    /*OUR LISTINGS DISPLAY SECTION - START*/
+
+.pagination
+{
+    margin-top: 0;
+    margin-bottom: 144px;
+    color: red;
+    text-align: center;
+}
+
+#main_listings img:hover
+{
+    transform: scale(1.05);
+    transition: 0.4s;
+    filter: brightness(100%);
+}
+
+                    /*OUR LISTINGS DISPLAY SECTION - END*/
