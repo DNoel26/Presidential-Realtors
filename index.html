@@ -44,8 +44,8 @@
                     <li><a id="active_link" href="">Home</a></li>
                     <li><a href="">About Us<i class="fas fa-sort-down"></i></a></li>
                     <div id="about_us_dropdown" class="dropdown_div">       
-                        <li><a href="#main_section_4">Services Offered</a></li>
-                        <li><a href="">Board of Directors</a></li>
+                        <li><a href="#main_section_4">Our Services</a></li>
+                        <li><a href="/html/our_directors.html">Board of Directors</a></li>
                         <li><a href="">Real Estate Agents</a></li>     
                     </div>
                     <li><a href="">Listings</a></li>
@@ -57,7 +57,7 @@
     <main id="main_homepage">
         <section id="hero_section"> <!--MAIN SECTION 1 - HERO-->
             <div class="container">
-                <h1>The <a href="#footer_nav"><i class="fas fa-key"></i></a> to Your Dreams Becoming a Reality</h1>
+                <h1>The <a href="#bottom_of_page"><i class="fas fa-key"></i></a> to Your Dreams Becoming a Reality</h1>
                 <p>Find what you need. Our agents are here to help!</p>
                 <a class="link_buttons" href="#main_section_5"><i class="fas fa-house-user"></i> Featured Listings</a>
             </div>
@@ -173,7 +173,7 @@
                         <div><h3>For Sale</h3></div>
                         <div>
                             <div>
-                                <h3><i class="fas fa-map-marker-alt"></i> Santa Cruz, Trinidad</h3>
+                                <h3><a href=""><i class="fas fa-map-marker-alt"></i></a> Santa Cruz, Trinidad</h3>
                             </div>
                             <div><h3><i class="fas fa-dollar-sign"></i>1,000,000.00</h3></div>    
                         </div>
@@ -189,7 +189,7 @@
                         <div><h3>For Rent</h3></div>
                         <div>
                             <div>
-                                <h3><i class="fas fa-map-marker-alt"></i> Santa Cruz, Trinidad</h3>
+                                <h3><a href=""><i class="fas fa-map-marker-alt"></i></a> Santa Cruz, Trinidad</h3>
                             </div>
                             <div><h3><i class="fas fa-dollar-sign"></i>1,000,000.00</h3></div>    
                         </div>
@@ -204,7 +204,7 @@
                         <div><h3>For Sale</h3></div>
                         <div>
                             <div>
-                                <h3><i class="fas fa-map-marker-alt"></i> Santa Cruz, Trinidad</h3>
+                                <h3><a href=""><i class="fas fa-map-marker-alt"></i></a> Santa Cruz, Trinidad</h3>
                             </div>
                             <div><h3><i class="fas fa-dollar-sign"></i>1,000,000.00</h3></div>    
                         </div>
@@ -214,10 +214,11 @@
             </div> 
         </section>
         <section id="main_section_4"> <!--MAIN SECTION 4 - OUR SERVICES-->
-            <div>
-                <h2 class="h2_format">What We Offer</h2>
-            </div>
+            
             <div class="full_width_banner"> <!--https://www.facebook.com/Security-and-Franchise-Employees-Credit-Union-110684430669609-->
+                <div>
+                    <h2 class="h2_format">Our Services</h2>
+                </div>
                 <div>
                     <div class="banner_container">
                         <div>
@@ -275,6 +276,24 @@
                                 <h3>Construction and Property Development</h3>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quidem praesentium! Deserunt veritatis, iste perspiciatis expedita nesciunt consequatur delectus dolor?</p>    
                             </div>
+                        </div>
+                    </div>
+                    <div class="banner_container">
+                        <div>
+                            <i class="fas fa-drafting-compass banner_i"></i>
+                        </div>
+                        <div>
+                            <h3>Plan Designing</h3>
+                            <p>Residential and Commercial Properties <i class="far fa-grin-wink"></i></p>
+                        </div>
+                    </div>
+                    <div class="banner_container">
+                        <div>
+                            <i class="fas fa-calculator banner_i"></i>
+                        </div>
+                        <div>
+                            <h3>Property Evaluation</h3>
+                            <p>Residential and Commercial Properties <i class="far fa-grin-wink"></i></p>
                         </div>
                     </div>
                 </div>
@@ -491,12 +510,15 @@
     js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
     fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>-->
-    <footer id="footer_homepage">
+    <footer id="bottom_of_page">
         <nav id="footer_nav">
             <div>
                 <div>
                     <a href="#top_of_page">Back to Top <i class="fas fa-hand-point-up"></i></a>
                 </div>
+                <div class="container fb-share-button" data-href="https://presidentialrealtors-dev.netlify.app/" data-layout="button_count" data-size="large">
+                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpresidentialrealtors-dev.netlify.app%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+                </div>  
                 <ul class="container">
                     <li><h1>Copyright &copy; 2020 Presidential Realtors & Associates Limited. All Rights Reserved</h1></li>
                     <li><a href="#top_of_page">Sitemap</a></li>
@@ -508,10 +530,7 @@
                         data-href="https://www.your-domain.com/your-page.html" 
                         data-layout="button_count">
                     </div>-->
-                </ul>
-                <div class="container fb-share-button" data-href="https://presidentialrealtors-dev.netlify.app/" data-layout="button_count" data-size="large">
-                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpresidentialrealtors-dev.netlify.app%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
-                </div>    
+                </ul> 
             </div>  
         </nav>
     </footer>

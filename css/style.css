@@ -181,7 +181,7 @@ html
     color: var(--font_color_blue);
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 32px;
+    margin-bottom: 128px;
     padding: 8px 16px;
     /*background-color: var(--bg_color_white_transparent);
     box-shadow: var(--material_card_box_shadow_subtle);*/
@@ -418,7 +418,7 @@ footer
 {
     /*background-color: var(--main_bg_color);*/
     background: var(--bg_color_white_transparent_dark);
-    height: 208px;
+    height: max-content;
 }
 
 footer, footer i
@@ -456,7 +456,7 @@ footer > nav > div > div:first-child
 
 footer a
 {
-    display: block;
+   
     width: max-content;
     justify-self: center;
     text-decoration: none;
@@ -464,7 +464,7 @@ footer a
     /*background-color: var(--bg_color_white_transparent);*/
     font-size: 1.6rem;
     /*background-color: red;*/
-    padding: 8px;
+    padding: 16px;
     transition: 0.4s;
     font-weight: 500;
 }
@@ -485,8 +485,8 @@ footer a:hover
 
 #footer_nav ul
 {
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin-top: 48px;
+    padding-bottom: 32px;
 }
 
 #footer_nav li
@@ -545,11 +545,12 @@ footer .container
 {
     transform: scale(1.05);
     transition: 0.4s;
+    filter: brightness(100%);
 }
 
 #hero_section
 {
-    background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url("/img/purple_home.jpg"); 
+    background-image: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.18)), url("/img/purple_home.jpg"); 
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -575,7 +576,7 @@ footer .container
 #hero_section > div
 {
     margin: 0 auto;
-    padding-top: 432px;
+    padding-top: 360px;
 }
 
 #hero_section h1, #hero_section p, #hero_section a
@@ -591,8 +592,8 @@ footer .container
 #hero_section h1
 {
     text-shadow: 0px 1px 0px black; 
-    font-size: 2.4rem;
-    padding: 8px 32px 24px 32px;
+    font-size: 3rem;
+    padding: 8px 32px 48px 32px;
     letter-spacing: 0.2rem;
     word-spacing: 0.1rem;
     color: var(--main_font_color);
@@ -602,6 +603,7 @@ footer .container
 {
     font-size: 1.2rem;
     padding: 0 32px 0 32px;
+    text-shadow: 0px 1px 0px black; 
 } 
 
 #hero_section div > a
@@ -630,6 +632,13 @@ footer .container
     all: unset;
     color: var(--main_font_color);
 }
+
+#body_directors #hero_section
+{   
+    background-image: url("../img/board_table.jpg");
+    height: 672px;
+}
+                    
                     /*HERO SECTION END*/
 
                     /*MAIN SECTION 2 - SEARCH - START*/
@@ -750,11 +759,11 @@ border-radius: 50px;
 
                     /*MAIN SECTION 2 - SEARCH - END*/
 
-                     /*MAIN SECTION 3 - RECENT - START*/
+                    /*MAIN SECTION 3 - RECENT - START*/
 
 #main_section_3
 {
-    margin-bottom: 208px;
+    margin-bottom: 144px;
     background-color: var(--bg_color_white_transparent);
 }
 
@@ -784,9 +793,14 @@ main section:nth-child(3) .latest_properties_container
     overflow: hidden;
 }
 
+.latest_properties h3 > a
+{
+    color: var(--font_color_purple);
+}
+
 .latest_properties img
 {
-    filter: brightness(70%);
+    filter: brightness(80%);
     object-fit: cover;
     width: 560px;
     height: 315px;
@@ -797,6 +811,7 @@ main section:nth-child(3) .latest_properties_container
 {
     transform: scale(1.05);
     transition: 0.4s;
+    filter: brightness(100%);
 }
 
 .latest_properties > div
@@ -853,23 +868,21 @@ main section:nth-child(3) .latest_properties_container
     padding: 8px 16px;
 }
 
-                      /*MAIN SECTION 3 - RECENT - END*/
+                    /*MAIN SECTION 3 - RECENT - END*/
 
-                      /*MAIN SECTION 4 - OUR SERVICES - START*/
+                    /*MAIN SECTION 4 - OUR SERVICES - START*/
 
 #main_section_4
 {
-    height: 720px; 
+    height: max-content;
     margin-bottom: 144px;
     background-color: var(--bg_color_white_transparent);
 }
 
 #main_section_4 .h2_format
 {
-    display: block;
     color: var(--main_font_color);
-    padding: 0;
-    margin: 0;
+    padding: 128px 0;
     margin: auto;
 }
 
@@ -881,10 +894,10 @@ main section:nth-child(3) .latest_properties_container
     text-shadow: 0px 1px 0px black;
     display: grid;
     align-items: center;
-    margin-top: -72px;
+
 }
 
-#main_section_4 .full_width_banner > div
+#main_section_4 .full_width_banner > div:nth-child(2)
 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -892,6 +905,8 @@ main section:nth-child(3) .latest_properties_container
     margin: auto 8px;
     background-color: var(--bg_color_black_transparent_light);
     box-shadow: var(--material_card_box_shadow_subtle);
+    height: max-content;
+    margin-bottom: 96px;
 }
 
 #main_section_4 .banner_container > div 
@@ -934,9 +949,9 @@ main section:nth-child(3) .latest_properties_container
     justify-self: center;
 }
 
-                      /*MAIN SECTION 4 - OUR SERVICES - END*/
+                    /*MAIN SECTION 4 - OUR SERVICES - END*/
 
-                      /*MAIN SECTION 5 - FEATURED - START*/
+                    /*MAIN SECTION 5 - FEATURED - START*/
 
 #main_section_5
 {
@@ -965,9 +980,15 @@ main section:nth-child(3) .latest_properties_container
     margin-bottom: 64px;
 }
 
+.featured_properties h4
+{
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
 .featured_properties:hover
 {
-    transform: scale(1.005);
+    transform: scale(1.003);
 }
 
 .property_showing_container
@@ -982,6 +1003,7 @@ main section:nth-child(3) .latest_properties_container
 {
     height: 245px;
     width: 100%;
+    filter: brightness(80%);
     object-fit: cover;
     transition: 0.4s;
 }
@@ -1023,6 +1045,7 @@ main section:nth-child(3) .latest_properties_container
 .property_specs_container i
 {
     color: var(--font_color_purple);
+    font-weight: 900;
     width: 16px;
     text-align: center;
 }
@@ -1059,6 +1082,12 @@ main section:nth-child(3) .latest_properties_container
     border-radius: 48px;
 }
 
+.property_agency_container i
+{
+    color: var(--font_color_purple);
+    font-weight: 900;
+}
+
 .property_price_container
 {
     display: grid;
@@ -1086,9 +1115,9 @@ main section:nth-child(3) .latest_properties_container
     margin-top: -16px;
 }
 
-                      /*MAIN SECTION 5 - FEATURED - END*/
+                    /*MAIN SECTION 5 - FEATURED - END*/
 
-                       /*MAIN SECTION 6 - ALL LISTINGS - START*/
+                    /*MAIN SECTION LAST - ALL LISTINGS - START*/
 
 #main_section_last
 {
@@ -1159,4 +1188,8 @@ main section:nth-child(3) .latest_properties_container
     /*border: 1px solid var(--bg_color_white);*/
 }
 
-                       /*MAIN SECTION 6 - ALL LISTINGS - END*/
+                    /*MAIN SECTION LAST - ALL LISTINGS - END*/
+
+                    /* DIRECTORS PAGE */
+
+                    /*MAIN SECTION LAST - ALL LISTINGS - END*/
