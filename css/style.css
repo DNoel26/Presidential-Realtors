@@ -13,7 +13,7 @@
     --bg_color_black_transparent_light: rgba(10,10,10,0.1);
     --bg_color_blue: #1A1363;
     --bg_color_gold: #D8B13F;
-    --bg_color_gold_transparent: rgba(216,177,63,0.2);
+    --bg_color_gold_transparent: rgba(216,177,63,0.33);
     --bg_color_gold_transparent_dark: rgba(216,177,63,0.67);
     --main_font_color: #f5f5f5;
     --font_color_black: #191919;
@@ -282,6 +282,17 @@ nav > div
 {
     text-align: right;
     position: relative;
+}
+
+#top_ul_right li:nth-child(1) a, #top_ul_right li:nth-child(2) a, #top_ul_right li:nth-child(3) a
+{
+    padding: 0 0;
+    margin: 0;
+}
+
+#top_ul_right li:nth-last-child(2) a
+{
+    padding-left: 32px;
 }
 
 #bottom_nav
@@ -1238,6 +1249,11 @@ main section:nth-child(3) .latest_properties_container
     text-align: center;
 }
 
+#main_directors
+{
+    /*background-color: var(--bg_color_gold_transparent);*/
+}
+
 #directors_section
 {
     display: grid;
@@ -1269,7 +1285,7 @@ main section:nth-child(3) .latest_properties_container
     left: 8px;
     color: var(--font_color_blue);
     font-size: 1.6rem;
-    animation: pulsate 2s steps(80, end) infinite;
+    /*animation: pulsate 2s steps(80, end) infinite;*/
     text-shadow: 0px 1px 0px white;
 }
 
@@ -1278,7 +1294,7 @@ main section:nth-child(3) .latest_properties_container
     margin-left: 656px;
     margin-top: 64px;
     transform: scale(1.1);
-    width: 320px;
+    width: 320px; /*320px*/
     transition: 0.4s;
     transition-timing-function: steps(500, start);
     background-color: var(--bg_color_white);
@@ -1303,6 +1319,7 @@ main section:nth-child(3) .latest_properties_container
     visibility: visible;
     box-shadow: var(--material_card_box_shadow_inset);
     transition: 0.8s;
+    background-color: var(--bg_color_white);
 }
 
 .director_profile_img_container
@@ -1316,8 +1333,11 @@ main section:nth-child(3) .latest_properties_container
     transition: 0.8s;
     transition-timing-function: steps(500, start);
     background-color: var(--bg_color_white);
-    box-shadow: var(--material_card_box_shadow_subtle);
-    /*border: 1px solid var(--font_color_black);*/
+    box-shadow: var(--material_card_box_shadow);
+    /*border: 1px solid var(--font_color_black);
+    background-color: var(--font_color_gold);
+    color: var(--bg_color_white) !important;*/
+    text-shadow: 0px 1px 0px black; ;
 }
 
 .director_profile_img_container h2
@@ -1331,15 +1351,26 @@ main section:nth-child(3) .latest_properties_container
 .director_profile_img_container h2:first-of-type
 {
     top: 56px;
+    left: 382px;
+    font-weight: 300;
+    color: var(--font_color_blue);
+}
+
+.director_profile_img_container h2:nth-last-child(2)
+{
+    top: 112px;
     left: 384px;
+    font-size: 1.2rem;
+    font-weight: 200;
 }
 
 .director_profile_img_container h2:last-of-type
 {
-    top: 144px;
+    top: 224px;
     left: 384px;
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: 400;
+    text-transform: uppercase;
 }
 
 .director_profile_img_container img
@@ -1369,16 +1400,20 @@ main section:nth-child(3) .latest_properties_container
 .director_profile_details_container h2, .director_profile_details_container p
 {
     text-align: justify;
+    
 }
 
 .director_profile_details_container h2
 {
     padding-bottom: 16px;
+    color: var(--font_color_blue);
+    font-weight: 400;
 }
 
 .director_profile_details_container h3
 {
     padding-top: 16px;
+    font-weight: 500;
 }
 
                     /*OUR DIRECTORS DIRECTORS SECTION - END*/
