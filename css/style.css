@@ -180,7 +180,7 @@ html
     font-size: 0.8rem;
     color: var(--font_color_purple);
     background-color: var(--bg_color_white);
-    font-weight: 700;
+    font-weight: 500;
     justify-self: center;
 }
 
@@ -757,12 +757,12 @@ footer .container
     background-color: var(--bg_color_white);
 }
 
-.form_container option:hover
+/*.form_container option:hover
 {
-    background-color: var(--main_bg_color) !important;
+    background-color: var(--main_bg_color);
 }
 
-/*.form_container input, .form_container select
+.form_container input, .form_container select
 {
     padding: 4px 4px;
     font-size: 0.8rem;
@@ -1250,11 +1250,6 @@ main section:nth-child(3) .latest_properties_container
     text-align: center;
 }
 
-#main_directors
-{
-    /*background-color: var(--bg_color_gold_transparent);*/
-}
-
 #directors_section
 {
     display: grid;
@@ -1401,7 +1396,6 @@ main section:nth-child(3) .latest_properties_container
 .director_profile_details_container h2, .director_profile_details_container p
 {
     text-align: justify;
-    
 }
 
 .director_profile_details_container h2
@@ -1651,10 +1645,15 @@ main section:nth-child(3) .latest_properties_container
     margin-bottom: 144px;
 }
 
+                    /*OUR CONTACT US HERO SECTION - END*/
+
+                    /*OUR CONTACT US FROM & FAQS - START*/
+
 #main_contact_us textarea
 {
-    width: 90%;
     height: 240px;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .contact_us
@@ -1689,4 +1688,60 @@ main section:nth-child(3) .latest_properties_container
     margin-right: auto;
 }
 
-                    /*OUR CONTACT US HERO SECTION - END*/
+#faqs_section h3
+{
+    font-weight: 400;
+}
+
+.faqs_container
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 96px;
+
+}
+
+.faqs_container > div
+{
+    padding: 4px 16px;
+}
+
+/*.faqs_container > div:hover
+{
+    height: 64px;
+    transition: 0.6s;
+}*/
+
+.collapse_child
+{
+    overflow: hidden;
+    border-top: 1px solid var(--font_color_blue);
+    border-bottom: 1px solid var(--font_color_purple);
+}
+
+.collapse_child:first-of-type, .collapse_child:nth-of-type(2)
+{
+    border-bottom: 0px solid var(--font_color_purple);
+}
+
+
+.collapse_content
+{
+    background-color: red;
+    height: 0;
+    overflow: hidden;
+    transition: 0.2s;
+    /*transition: max-height 1.6s linear;*/
+}
+
+.collapse_child:hover .collapse_content
+{
+    height: 96px;
+    background-color: blue;
+    transition: 0.6s;
+    overflow: none;
+    font-size: inherit;
+    /*transition: max-height 1.6s linear;*/
+}
+
+                    /*OUR CONTACT US FROM & FAQS - END*/
