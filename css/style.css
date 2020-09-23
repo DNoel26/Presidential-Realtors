@@ -205,6 +205,7 @@ html
     /*background-color: var(--bg_color_white_transparent);
     box-shadow: var(--material_card_box_shadow_subtle);*/
     font-size: 3.2rem;
+    font-weight: 500;
 }
 
                     /* GENERAL CLASSES AND IDS ABOVE */
@@ -268,6 +269,11 @@ nav > div
     box-shadow:  2px 2px 6px #3c1a58;
     background: var(--main_bg_color_transparent);
     transition: 0.4s;
+}
+
+nav a:hover i
+{
+    transform: rotate(360deg);
 }
 
 #top_nav a:hover, #top_nav a:hover i
@@ -356,8 +362,8 @@ nav > div
     padding-top: 8px;
     padding-bottom: 8px;
     color: var(--main_font_color);
-    /*background-color: var(--font_color_purple);*/
-    transition: 0.4s /*color 0.4s, background 0.4s;*/
+    background-color: var(--font_color_purple);
+    transition: 0.6s color 0.6s, background 0.6s;
 }
 
 #bottom_ul_right i
@@ -377,21 +383,19 @@ ul
                 inset -4px -4px 8px var(--main_bg_color_light_shadow);
     color: var(--link_hover_color);
     background-color: var(--main_bg_color);*/
-    color: var(--font_color_purple);
-    background-color: var(--bg_color_white);
-    outline: 1px solid var(--font_color_purple);
+    color: var(--main_font_color);
+    background-color: var(--main_bg_color_transparent_dark);
     padding-top: 8px;
     padding-bottom: 8px;
     box-shadow: var(--material_card_box_shadow_subtle_2); 
 }
 
-#active_link:hover
+/*#active_link:hover
 {
-    color: var(--main_font_color);
     background-color: var(--main_bg_color);
     outline: 1px solid var(--main_font_color);
     transition: 0.4s;
-}
+}*/
 
 #logo
 {
@@ -860,6 +864,12 @@ main section:nth-child(3) .latest_properties_container
     color: var(--font_color_purple);
 }
 
+.latest_properties h3 > a:hover i
+{
+    transition: 0.4s;
+    transform: rotate(360deg);
+}
+
 .latest_properties img
 {
     filter: brightness(80%);
@@ -1189,6 +1199,13 @@ main section:nth-child(3) .latest_properties_container
     margin-top: -16px;
 }
 
+.property_details_container a:hover i, .property_agency_container a:hover i,
+.property_specs_container a:hover i
+{
+    transition: 0.4s;
+    transform: rotate(360deg);
+}
+
                     /*MAIN SECTION 5 - FEATURED - END*/
 
                     /*MAIN SECTION LAST - LINKS - START*/
@@ -1469,6 +1486,7 @@ main section:nth-child(3) .latest_properties_container
 .director_profile_details_container a:hover i
 {
     transform: scale(1.2);
+    transform: rotate(360deg);
     transition: 0.4s;
 }
 
@@ -1644,7 +1662,7 @@ main section:nth-child(3) .latest_properties_container
 {
     transform: scale(1.2);
     transition: 0.4s;
-    
+    transform: rotate(360deg);
 }
 
                     /*OUR AGENTS PROFILE SECTION - END*/
@@ -1706,6 +1724,17 @@ main section:nth-child(3) .latest_properties_container
     margin-bottom: 32px;
 }
 
+#main_listing_details .h2_format
+{
+    color: var(--main_font_color);
+    text-shadow: 0px 1px 0px black;
+}
+
+#main_listing_details
+{
+    color: var(--font_color_black)
+}
+
 #listing_details_2
 {
     height: 640px;
@@ -1717,7 +1746,7 @@ main section:nth-child(3) .latest_properties_container
     padding-right: 0;
     outline: none;
     background-color: var(--bg_color_white);
-    box-shadow: var(--material_card_box_shadow);
+    box-shadow: var(--material_card_box_shadow_subtle);
     display: grid;
     align-items: center;
 }
@@ -1745,6 +1774,11 @@ main section:nth-child(3) .latest_properties_container
     height: 100%;
     width: 100%;
     background-color: var(--main_bg_color_transparent);
+    object-fit: cover;
+}
+
+.img_carousel_container img
+{
     object-fit: cover;
 }
 
@@ -1821,8 +1855,59 @@ main section:nth-child(3) .latest_properties_container
     filter: brightness(100%);
 }
 
+#listing_details_3 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
 
+#listing_details_3 .property_details_container, #listing_details_3 .property_agency_container, 
+#listing_details_3 .property_price_container
+{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    justify-self: left;
+    align-self: center;
+}
 
+#listing_details_3 .property_agency_container
+{
+    grid-template-columns: 112px 1fr;
+    column-gap: 4px;
+    overflow: hidden;
+    font-size: 0.9rem;
+}
+
+#listing_details_3 .property_agency_container i
+{
+    width: 16px;
+    text-align: center;
+}
+
+#listing_details_3 .property_agency_container img
+{
+    width: 112px;
+    height: 112px;
+    border-radius: 0;
+}
+
+#listing_details_3 .property_agency_container img:hover
+{
+    transform: scale(1.1);
+}
+
+#listing_details_3 .property_price_container
+{
+    padding: 8px;    
+}
+
+.id_display
+{
+    display: block;
+    color: var(--font_color_purple);
+    text-align: center;
+}
                     /*FULL LISTING DETAILS HERO SECTION - END*/
 
                     /*OUR CONTACT US HERO SECTION - START*/
@@ -1995,3 +2080,5 @@ main section:nth-child(3) .latest_properties_container
 }
 
                     /*OUR CONTACT US FROM & FAQS - END*/
+
+ 
