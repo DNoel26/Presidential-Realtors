@@ -223,6 +223,17 @@ body
     font-weight: 300;
 }
 
+section:first-of-type
+{
+    outline: none;
+}
+
+section
+{
+    outline: 1px solid lightgrey;
+    outline-offset: 16px;
+}
+
 header, nav
 {
     width: 100%;
@@ -256,11 +267,13 @@ nav > div
     /*background: #602A8C;*/
     box-shadow:  2px 2px 6px #3c1a58;
     background: var(--main_bg_color_transparent);
+    transition: 0.4s;
 }
 
-#top_nav a:hover
+#top_nav a:hover, #top_nav a:hover i
 {
     color: var(--link_hover_color);
+    transition: 0.4s;
 }
 
 #top_nav li
@@ -321,8 +334,9 @@ nav > div
 
 #bottom_ul_right a
 {
-    transition: 0.4s;
+    transition: 0.1s;
     font-weight: 500;
+    outline: 0px solid var(--main_font_color);
 }
 
 /*
@@ -334,14 +348,21 @@ nav > div
 
 #bottom_ul_right a:hover
 {
-    border-radius: 2px;
-    background: var(--main_bg_color_transparent);
+    /*background: var(--main_bg_color_transparent);
     box-shadow:  4px 4px 8px var(--main_bg_color_dark_shadow), 
                  -4px -4px 8px var(--main_bg_color_light_shadow);
-    color: var(--link_hover_color);
+    color: var(--link_hover_color);*/
+    outline: 1px solid var(--main_font_color);
     padding-top: 8px;
     padding-bottom: 8px;
-    transition: 0.4s;
+    color: var(--main_font_color);
+    /*background-color: var(--font_color_purple);*/
+    transition: 0.4s /*color 0.4s, background 0.4s;*/
+}
+
+#bottom_ul_right i
+{
+    padding-right: 0;
 }
 
 ul
@@ -351,13 +372,25 @@ ul
 
 #active_link
 {
-    border-radius: 0px;
-    background: var(--main_bg_color_transparent);
+    /*background: var(--main_bg_color_transparent);
     box-shadow: inset 4px 4px 8px var(--main_bg_color_dark_shadow), 
                 inset -4px -4px 8px var(--main_bg_color_light_shadow);
     color: var(--link_hover_color);
+    background-color: var(--main_bg_color);*/
+    color: var(--font_color_purple);
+    background-color: var(--bg_color_white);
+    outline: 1px solid var(--font_color_purple);
     padding-top: 8px;
-    padding-bottom: 8px; 
+    padding-bottom: 8px;
+    box-shadow: var(--material_card_box_shadow_subtle_2); 
+}
+
+#active_link:hover
+{
+    color: var(--main_font_color);
+    background-color: var(--main_bg_color);
+    outline: 1px solid var(--main_font_color);
+    transition: 0.4s;
 }
 
 #logo
@@ -397,7 +430,7 @@ ul
     text-shadow: 0px 1px 0px black;
 }
 
-nav i::before
+nav i
 {
     padding: 0 8px;
 }
@@ -425,7 +458,7 @@ nav a
     position: absolute;
     z-index: 1000;
     top: 72px;
-    left: 236px; /*238*/
+    left: 243px; /*238*/
     text-align: left;
 }
 
@@ -676,6 +709,7 @@ footer .container
     /*box-shadow: var(--material_card_box_shadow);
     width: 1168px;*/
     display: grid;
+    outline: none;
 }
 
 #search_section
@@ -741,7 +775,7 @@ footer .container
     padding: 8px 16px;
     margin: 0 auto;
     background-color: var(--main_bg_color_transparent_dark);
-    box-shadow: var(--material_card_box_shadow);
+    box-shadow: var(--material_card_box_shadow_subtle);
     max-width: 1168px;
 }
 
@@ -1244,10 +1278,12 @@ main section:nth-child(3) .latest_properties_container
 
                     /*OUR DIRECTORS DIRECTORS SECTION - START*/
 
-#main_directors > section:last-child
+#main_directors > section:last-of-type
 {
+    margin-top: 64px;
     margin-bottom: 144px;
     text-align: center;
+    outline: none;
 }
 
 #directors_section
@@ -1256,6 +1292,7 @@ main section:nth-child(3) .latest_properties_container
     justify-content: left;
     margin-left: 96px;
     overflow: hidden;
+    margin: auto;
 }
 
 .director_profile_container > div
@@ -1274,7 +1311,7 @@ main section:nth-child(3) .latest_properties_container
     left: 0;
 }
 
-.director_profile_container i
+.director_profile_img_container i
 {
     position: absolute;
     top: 8px;
@@ -1287,14 +1324,14 @@ main section:nth-child(3) .latest_properties_container
 
 .director_profile_container > div:hover .director_profile_img_container
 {
-    margin-left: 656px;
+    margin-left: 720px;
     margin-top: 64px;
-    transform: scale(1.1);
+    transform: scale(1.2);
     width: 320px; /*320px*/
     transition: 0.4s;
     transition-timing-function: steps(500, start);
     background-color: var(--bg_color_white);
-    box-shadow: var(--material_card_box_shadow_large);
+    box-shadow: var(--material_card_box_shadow);
     border: none;
 }
 
@@ -1313,7 +1350,7 @@ main section:nth-child(3) .latest_properties_container
 {
     width: 672px;
     visibility: visible;
-    box-shadow: var(--material_card_box_shadow_inset);
+    /*box-shadow: var(--material_card_box_shadow_inset);*/
     transition: 0.8s;
     background-color: var(--bg_color_white);
 }
@@ -1328,8 +1365,8 @@ main section:nth-child(3) .latest_properties_container
     z-index: 2;
     transition: 0.8s;
     transition-timing-function: steps(500, start);
-    background-color: var(--bg_color_white);
-    box-shadow: var(--material_card_box_shadow);
+    background-color: white;
+    box-shadow: var(--material_card_box_shadow_subtle_2);
     /*border: 1px solid var(--font_color_black);
     background-color: var(--font_color_gold);
     color: var(--bg_color_white) !important;*/
@@ -1396,29 +1433,54 @@ main section:nth-child(3) .latest_properties_container
 .director_profile_details_container h2, .director_profile_details_container p
 {
     text-align: justify;
+    padding-bottom: 16px;
 }
 
 .director_profile_details_container h2
 {
-    padding-bottom: 16px;
     color: var(--font_color_blue);
     font-weight: 400;
 }
 
 .director_profile_details_container h3
 {
-    padding-top: 16px;
     font-weight: 500;
+}
+
+.director_profile_details_container a
+{
+    text-decoration: none;
+    display: block;
+    width: max-content;
+    padding-top: 8px;
+    color: inherit;
+}
+
+.director_profile_details_container a:hover
+{
+    color: var(--font_color_purple);
+}
+
+.director_profile_details_container a i
+{
+    transition: 0.4s;
+}
+
+.director_profile_details_container a:hover i
+{
+    transform: scale(1.2);
+    transition: 0.4s;
 }
 
                     /*OUR DIRECTORS DIRECTORS SECTION - END*/
 
                     /*OUR AGENTS HERO SECTION - START*/
 
-#main_agents > section:last-child
+#main_agents > section:last-of-type
 {
     margin-bottom: 144px;
     text-align: center;
+    outline: none;
 }
 
 #body_agents #hero_section
@@ -1442,8 +1504,7 @@ main section:nth-child(3) .latest_properties_container
 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 16px;
-    row-gap: 48px;
+    gap: 16px;
 }
 
 .agent_profile_card
@@ -1452,7 +1513,9 @@ main section:nth-child(3) .latest_properties_container
     color: var(--font_color_black);
     grid-template-columns: 240px 320px;
     grid-auto-flow: dense;
-    box-shadow: var(--material_card_box_shadow_subtle_2);
+    box-shadow: var(--material_card_box_shadow_subtle);
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
 
 /*.agent_profile_card:nth-child(odd)
@@ -1516,7 +1579,7 @@ main section:nth-child(3) .latest_properties_container
 .agent_profile_img_container img:hover
 {
     transform: scale(1.2);
-    transition: 0.4s;
+    transition: 0.4s ease-out;
 }
 
 .agent_profile_details_container 
@@ -1551,6 +1614,7 @@ main section:nth-child(3) .latest_properties_container
     width: 24px;
     text-align: center;
     color: var(--font_color_purple);
+    transition: 0.4s;
 }
 
 .agent_profile_details_container ul
@@ -1573,14 +1637,14 @@ main section:nth-child(3) .latest_properties_container
 .agent_profile_details_container a:hover
 {
     color: var(--font_color_purple);
-    transform: scale(1.5);
     transition: 0.4s;
 }
 
 .agent_profile_details_container a:hover i
 {
-    transform: scale(1.5);
+    transform: scale(1.2);
     transition: 0.4s;
+    
 }
 
                     /*OUR AGENTS PROFILE SECTION - END*/
@@ -1619,6 +1683,7 @@ main section:nth-child(3) .latest_properties_container
     margin-bottom: 64px;
     color: red;
     text-align: center;
+    outline: none;
 }
 
 #main_listings img:hover
@@ -1630,6 +1695,136 @@ main section:nth-child(3) .latest_properties_container
 
                     /*OUR LISTINGS DISPLAY SECTION - END*/
 
+                    /*FULL LISTING DETAILS HERO SECTION - START*/
+
+#main_listing_details #hero_section
+{
+    background-image: linear-gradient(rgba(0,0,0,0.33), rgba(0,0,0,0.33)), url("../img/nice_house.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 960px;
+    margin-bottom: 32px;
+}
+
+#listing_details_2
+{
+    height: 640px;
+    max-width: 1136px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 64px;
+    padding-left: 0;
+    padding-right: 0;
+    outline: none;
+    background-color: var(--bg_color_white);
+    box-shadow: var(--material_card_box_shadow);
+    display: grid;
+    align-items: center;
+}
+
+/*.img_carousel_container
+{
+    display: grid;
+    position: sticky;
+    top: 25vh;
+    grid-template-columns: 1fr 3fr 1fr;
+    margin-top: -560px; 
+    column-gap: 32px;
+    max-height: 100%;
+    width: 100%;
+    background-color: var(--bg_color_black_transparent);
+}*/
+
+.img_carousel_container
+{
+    display: grid;
+    position: sticky;
+    top: 25vh;
+    grid-template-rows: 480px 120px;
+    margin-top: -1024px; 
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg_color_black_transparent);
+    object-fit: cover;
+}
+
+.img_carousel_container ul:first-of-type .buttons
+{
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--main_font_color);
+}
+
+.img_carousel_container ul:last-of-type > div:first-child,
+.img_carousel_container ul:last-of-type > div:last-child
+{
+    align-self: center;
+}
+
+.img_carousel_container ul:last-of-type .buttons
+{
+    margin: 0 auto;
+    display: block;
+    padding: 16px
+}
+
+.img_carousel_container > ul:first-of-type
+{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    column-gap: 16px;
+    max-height: 100%;
+    width: 100%;
+}
+
+.img_carousel_container > ul:last-of-type
+{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    column-gap: 16px;
+    align-content: flex-start;
+}
+
+.img_carousel_container > ul:last-of-type > div:nth-child(2)
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 8px;
+    align-content: flex-start;
+}
+
+#listing_details_2 li
+{
+    display: block;
+    max-height: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#listing_details_2 img
+{
+    display: block;
+    max-height: 100%;
+    transition: 0.4s;
+    filter: brightness(90%);
+    border: 1px solid white;
+}
+
+#listing_details_2 img:hover
+{
+    transform: scale(1.2);
+    transition: 0.4s;
+    filter: brightness(100%);
+}
+
+
+
+                    /*FULL LISTING DETAILS HERO SECTION - END*/
+
                     /*OUR CONTACT US HERO SECTION - START*/
                     
 #main_contact_us
@@ -1639,7 +1834,7 @@ main section:nth-child(3) .latest_properties_container
 
 #main_contact_us #hero_section
 {
-    background-image: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.18)), url("../img/contact_us.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.67), rgba(0,0,0,0.67)), url("../img/contact_us.jpg");
     background-position: center;
     height: 688px;
     margin-bottom: 144px;
@@ -1648,6 +1843,12 @@ main section:nth-child(3) .latest_properties_container
                     /*OUR CONTACT US HERO SECTION - END*/
 
                     /*OUR CONTACT US FROM & FAQS - START*/
+
+#main_contact_us section > div
+{
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
 
 #main_contact_us textarea
 {
@@ -1660,7 +1861,7 @@ main section:nth-child(3) .latest_properties_container
 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 16px;
+    column-gap: 32px;
 }
 
 .contact_us_container iframe
@@ -1669,15 +1870,20 @@ main section:nth-child(3) .latest_properties_container
     height: 100%;
 }
 
-.contact_us_container > div > div > div:last-child
+.contact_us_container > div > div > div:last-child, .contact_us_container .form_container
 {
-    box-shadow: var(--material_card_box_shadow);
+    box-shadow: var(--material_card_box_shadow_subtle_2);
 }
 
 .contact_us_container .button_container
 {
     width: 90%;
     text-align: right;
+}
+
+.contact_us_container .buttons:hover
+{
+    padding: 4px 8px;
 }
 
 #faqs_section
@@ -1697,16 +1903,53 @@ main section:nth-child(3) .latest_properties_container
 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 96px;
-
+    column-gap: 32px;
 }
 
 .faqs_container > div
 {
-    padding: 4px 16px;
+    display: grid;
+    box-shadow: var(--material_card_box_shadow_subtle_2);
+    height: 100%;
+    align-items: center;
 }
 
-/*.faqs_container > div:hover
+.faqs_container > div:last-of-type
+{
+    background-image: linear-gradient(rgba(0,0,0,0.67), rgba(0,0,0,0.67)), url("../img/faq.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.faqs_container:hover > div:last-of-type
+{
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url("../img/faq.jpg");
+}
+
+.faqs_container i
+{
+    color: var(--font_color_purple);
+}
+
+/*.faqs_container img
+{
+    filter: brightness(50%);
+    transition: filter 0.5s ease-out;
+    transform: translateZ(0);
+    display: block;
+    object-fit: cover;
+    
+}
+
+.faqs_container img:hover
+{
+    filter: brightness(100%);
+    transition: filter 0.5s ease-out;
+    transform: translateZ(0);
+}
+
+.faqs_container > div:hover
 {
     height: 64px;
     transition: 0.6s;
@@ -1715,15 +1958,22 @@ main section:nth-child(3) .latest_properties_container
 .collapse_child
 {
     overflow: hidden;
-    border-top: 1px solid var(--font_color_blue);
+    border-top: 0px solid var(--font_color_blue);
     border-bottom: 1px solid var(--font_color_purple);
+    padding: 4px 16px; 
 }
 
-.collapse_child:first-of-type, .collapse_child:nth-of-type(2)
+.collapse_child:first-of-type
 {
-    border-bottom: 0px solid var(--font_color_purple);
+    border-top: 1px solid var(--font_color_blue);
+    margin-top: 32px; 
 }
 
+.collapse_child:last-of-type
+{
+    border-bottom: 1px solid var(--font_color_blue);
+    margin-bottom: 32px;
+}
 
 .collapse_content
 {
@@ -1738,7 +1988,7 @@ main section:nth-child(3) .latest_properties_container
 {
     height: 96px;
     background-color: blue;
-    transition: 0.6s;
+    transition: 0.8s;
     overflow: none;
     font-size: inherit;
     /*transition: max-height 1.6s linear;*/
