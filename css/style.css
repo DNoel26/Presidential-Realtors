@@ -1717,7 +1717,7 @@ main section:nth-child(3) .latest_properties_container
 
 #main_listing_details #hero_section
 {
-    background-image: linear-gradient(rgba(0,0,0,0.33), rgba(0,0,0,0.33)), url("../img/nice_house.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.67), rgba(0,0,0,0.67)), url("../img/nice_house.jpg");
     background-position: center;
     background-size: cover;
     height: 960px;
@@ -1746,7 +1746,7 @@ main section:nth-child(3) .latest_properties_container
     padding-right: 0;
     outline: none;
     background-color: var(--bg_color_white);
-    box-shadow: var(--material_card_box_shadow_subtle);
+    box-shadow: var(--material_card_box_shadow_subtle_2);
     display: grid;
     align-items: center;
 }
@@ -1768,13 +1768,19 @@ main section:nth-child(3) .latest_properties_container
 {
     display: grid;
     position: sticky;
-    top: 25vh;
+    top: 30vh;
     grid-template-rows: 480px 120px;
     margin-top: -1024px; 
     height: 100%;
     width: 100%;
-    background-color: var(--main_bg_color_transparent);
-    object-fit: cover;
+    background-color: var(--bg_color_white_transparent);
+}
+
+.img_carousel_container:hover iframe
+{
+    height: 100%;
+    visibility: visible;
+     d
 }
 
 .img_carousel_container img
@@ -1831,28 +1837,48 @@ main section:nth-child(3) .latest_properties_container
     align-content: flex-start;
 }
 
+.dropdown_map 
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.dropdown_map iframe
+{
+    height: 0;
+    width: 100%;
+    visibility: hidden;
+    transition: 0.4s ease-out;
+}
+
 #listing_details_2 li
 {
     display: block;
-    max-height: 100%;
     margin: auto;
     overflow: hidden;
+    transition: 0.1s;
+}
+
+#listing_details_2 li:hover
+{
+    display: block;
+    margin: auto;
+    overflow: hidden;
+    box-shadow: var(--material_card_box_shadow_subtle);
+    transition: 0.2s;
 }
 
 #listing_details_2 img
 {
     display: block;
-    max-height: 100%;
-    transition: 0.4s;
-    filter: brightness(90%);
-    border: 1px solid white;
+    transition: 0.1s;
+    /*border: 1px solid var(--font_color_blue);*/
 }
 
 #listing_details_2 img:hover
 {
-    transform: scale(1.2);
     transition: 0.4s;
-    filter: brightness(100%);
 }
 
 #listing_details_3 
@@ -1860,6 +1886,8 @@ main section:nth-child(3) .latest_properties_container
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
+    margin-bottom: 64px;
+    box-shadow: var(--material_card_box_shadow_subtle_2);
 }
 
 #listing_details_3 .property_details_container, #listing_details_3 .property_agency_container, 
@@ -1902,12 +1930,81 @@ main section:nth-child(3) .latest_properties_container
     padding: 8px;    
 }
 
-.id_display
+#listing_details_3 .detail_title_display
+{
+    padding-top: 32px;
+}
+
+#listing_details_3 > div:last-child
+{
+    padding-bottom: 32px;
+}
+
+.detail_title_display
 {
     display: block;
     color: var(--font_color_purple);
     text-align: center;
+    margin-top: 16px;
 }
+
+#listing_details_4
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin-bottom: 64px;
+    box-shadow: var(--material_card_box_shadow_subtle_2);
+}
+
+#listing_details_4 .detail_title_display
+{
+    padding-top: 32px;
+}
+
+.property_description_container
+{
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.property_description h4
+{
+    font-weight: 400;
+    text-align: justify;
+}
+
+#listing_details_5
+{
+    margin-bottom: 64px;
+    padding: 16px;
+    box-shadow: var(--material_card_box_shadow_subtle_2);
+}
+
+#listing_details_5 > div
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    row-gap: 8px;
+    column-gap: 16px;
+    padding: 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#listing_details_5 > div > div
+{
+    padding-left: 64px;
+}
+
+#listing_details_5 i
+{
+    color: var(--font_color_purple);
+    text-align: center;
+    width: 24px;
+}
+
                     /*FULL LISTING DETAILS HERO SECTION - END*/
 
                     /*OUR CONTACT US HERO SECTION - START*/
