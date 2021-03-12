@@ -1780,7 +1780,6 @@ main section:nth-child(3) .latest_properties_container
 {
     height: 100%;
     visibility: visible;
-     d
 }
 
 .img_carousel_container img
@@ -2178,4 +2177,35 @@ main section:nth-child(3) .latest_properties_container
 
                     /*OUR CONTACT US FROM & FAQS - END*/
 
- 
+/*.grid
+{
+    display:grid;
+}
+
+.grid-col-2
+{
+    grid-template-columns: repeat(2,1fr);
+}
+
+.grid-col-4
+{
+    grid-template-columns: repeat(4,1fr);
+}
+
+.grid-col-3
+{
+    grid-template-columns: (3,1fr);
+}
+
+.heading-size-2
+{
+    font-size: 2rem;
+}
+
+@media()
+{
+    .grid-col-2,.grid-col-3
+    {
+        grid-template-columns: 1fr;
+    }
+}*/
